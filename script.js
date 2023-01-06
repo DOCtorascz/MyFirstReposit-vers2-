@@ -34,4 +34,4 @@ function posSize(message) {
 
 	return result.length;
 }
-posSize('Привет! https://github.com');
+posSize('Привет! https://github.com')
