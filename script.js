@@ -1,14 +1,14 @@
 function posSize(message) {
-	let str = '';
-	let indx = message.indexOf('https://');
-	let result = '';
+  let str = '';
+  let indx = message.indexOf('https://');
+  let result = '';
 
-	// На случай, если ссылок нет
-	if (indx == -1) {
-		return message.length;
-	}
+  // На случай, если ссылок нет
+  if (indx == -1) {
+	  return message.length;
+  }
 
-	//Если ссылки обнаружены
+  //Если ссылки обнаружены
 	for (let i = 0; i <= message.length - 1; i++) {
 		//Ищем индекс каждой ссылки
 		let indx2 = message.indexOf('https://', i);
