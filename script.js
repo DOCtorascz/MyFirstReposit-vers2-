@@ -24,8 +24,8 @@ function posSize(message) {
   let indx3 = message.indexOf('https://');
   //Вырезаем текст до ссылки
   if (indx3 > -1) {
-	  message = message.slice(0, indx3);
-	  result = message.length;
+    message = message.slice(0, indx3);
+    result = message.length;
   }
   //Возвращаем результат
   return result.length;
