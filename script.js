@@ -66,6 +66,3 @@ function posSize(message) {
 }
 posSize('Привет! https://github.com Привет http://github.com Пока www.github.com');
 
-// var str = 'qwertyuiop toster.ru asdfhjkl zxvnm www.vk.com google.ru www.vk.com p google.ru google.ru burtovoy.org sadfas github.com';
-// str = str.replace(/[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g, '').replace(/\s+/g, ' ').trim();
-// console.log(str)
