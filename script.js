@@ -29,7 +29,7 @@ function posSize(message) {
 			result = message.length;
 		} else if (indxHttp > -1) {
 			str = message.slice(indxHttp);
-			indxResult = str.indexOf(' ');
+		  indxResult = str.indexOf(' ');
 			str = str.slice(0, indxResult + 1);
 			message = message.replace(str, '');
 			result = message.length;
