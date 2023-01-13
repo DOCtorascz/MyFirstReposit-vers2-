@@ -64,4 +64,4 @@ function posSize(message) {
  console.log(result)
  return result.length;
 }
-posSize('Привет! https://github.com');
+posSize('Привет! https://github.com Привет http://github.com Пока www.github.com');
