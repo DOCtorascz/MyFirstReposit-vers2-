@@ -1,0 +1,44 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.header {
+  text-align: center;
+}
+
+.header__images {
+  margin-top: 24px;
+}
+
+.header__name {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.header__form-autoriz {
+  padding: 15px 75px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  background: blue;
+  margin-bottom: 16px;
+  border: 1px solid blue;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.header__form-open {
+  padding: 15px 137px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: blue;
+  background: white;
+  border: 1px solid blue;
+  border-radius: 10px;
+  cursor: pointer;
+}
