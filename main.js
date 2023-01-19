@@ -1,4 +1,5 @@
 function posSize(message) {
+
 	let str = "";
 	let strMess = message;
 	let indx = message.indexOf("https://");
@@ -58,4 +59,3 @@ function posSize(message) {
 	console.log(strMess);
 	return strMess;
 }
-posSize("Привет! https://github.com http://github.com www.github.com g");
