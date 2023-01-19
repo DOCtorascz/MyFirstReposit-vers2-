@@ -16,6 +16,10 @@ body {
   line-height: 38px;
 }
 
+.header__form{
+	margin-bottom: 24px;
+}
+
 .header__form-autoriz {
   padding: 15px 75px;
   font-family: inherit;
