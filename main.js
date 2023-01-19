@@ -4,7 +4,6 @@ function posSize(message) {
   let indx = message.indexOf("https://");
   let indxP = message.indexOf("http://");
   let indxW = message.indexOf("www");
-  let result = "";
 
   // На случай, если ссылок нет
   if (indx == -1 && indxP == -1 && indxW == -1) {
