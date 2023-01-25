@@ -6,27 +6,27 @@ let array = strMail.split(';')
 let result = null
 //функция валидации email
 function valid(strListMail) {
-	//цикл перебора возможных вариантова email	
-	for (let i = 0; i <= array.length - 1; i++) {
-		let str = array[i]
-		//цикл перебора основной строки
-		for (let j = 0; j <= strListMail.length - 1; j++) {
-			let indx = strListMail.indexOf(str)
-			//условие при котором почта валидна
-			if (indx != -1) {
+ //цикл перебора возможных вариантова email	
+ for (let i = 0; i <= array.length - 1; i++) {
+  let str = array[i]
+  //цикл перебора основной строки
+  for (let j = 0; j <= strListMail.length - 1; j++) {
+   let indx = strListMail.indexOf(str)
+   //условие при котором почта валидна
+   if (indx != -1) {
 
-				for (let domenEnd = 0; domenEnd <= domen.length - 1; domenEnd++) {
-					let indx3 = strListMail.indexOf('', strListMail.length)
+    for (let domenEnd = 0; domenEnd <= domen.length - 1; domenEnd++) {
+     let indx3 = strListMail.indexOf('', strListMail.length)
 
-					if (strListMail[indx3 - 2] == 'r' || strListMail[indx3 - 2] == 'o') {
-						result = true
-					}
-				}
-			}
-		}
-	}
-	console.log(result)
-	return result == true
+     if (strListMail[indx3 - 2] == 'r' || strListMail[indx3 - 2] == 'o') {
+      result = true
+     }
+    }
+   }
+  }
+ }
+ console.log(result)
+ return result == true
 }
 
 valid('timur-sdsada@outlook.com')
