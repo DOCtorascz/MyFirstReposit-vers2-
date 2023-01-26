@@ -22,7 +22,7 @@ function posSize(message) {
 
  let result = 0
 
- for (let i = 0; i <= arrayReverse.length - 1; i++) {
+ let arr = arrayReverse.forEach((item, index) => {
   let indx = arrayMessage.indexOf(arrayReverse[i], 0)
   let indxDoth = arrayMessage.indexOf('.', indx)
 
@@ -32,7 +32,8 @@ function posSize(message) {
    let str = arrayMessage.slice(indx, indxSpace)
    result += str.length
   }
- }
+
+ })
 
  result = message.length - result
  console.log(result)
