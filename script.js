@@ -23,7 +23,7 @@ function posSize(message) {
  let result = 0
 
  let arr = arrayReverse.forEach((item, index) => {
-  let indx = arrayMessage.indexOf(arrayReverse[i], 0)
+  let indx = arrayMessage.indexOf(arrayReverse[index], 0)
   let indxDoth = arrayMessage.indexOf('.', indx)
 
 
