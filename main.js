@@ -26,9 +26,10 @@ function posReplace(message) {
 
  let indxEquals = null
 
- for (let i = 0; i <= arrayReverse.length - 1; i++) {
+ let arr = arrayReverse.forEach((item, index) => {
+
   for (let j = 0; j <= messageDuble.length - 1; j++) {
-   let indx2 = arrayMessage.indexOf(arrayReverse[i], j)
+   let indx2 = arrayMessage.indexOf(arrayReverse[index], j)
    let indxDoth = arrayMessage.indexOf('.', indx2)
 
    if (indx2 != -1 && arrayMessage[indxDoth + 1] != ' ') {
@@ -39,7 +40,8 @@ function posReplace(message) {
     indxEquals = indx2
    }
   }
- }
+
+ })
 
  if (indxEquals == null) {
   console.log(message)
