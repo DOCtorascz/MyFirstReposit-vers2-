@@ -22,17 +22,17 @@ function posSize(message) {
 
  let result = 0
 
- for (let i = 0; i <= arrayReverse.length - 1; i++) {
-  let indx = arrayMessage.indexOf(arrayReverse[i], 0)
+ let arr = arrayReverse.forEach((item, index) => {
+  let indx = arrayMessage.indexOf(arrayReverse[index], 0)
   let indxDoth = arrayMessage.indexOf('.', indx)
-
 
   if (indx != -1 && arrayMessage[indxDoth + 1] != ' ') {
    let indxSpace = arrayMessage.indexOf(' ', indx)
    let str = arrayMessage.slice(indx, indxSpace)
    result += str.length
   }
- }
+
+ })
 
  result = message.length - result
  console.log(result)
