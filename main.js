@@ -137,7 +137,15 @@ function valid(strListMail) {
   let indxDown = strListMail.indexOf('@')
   let indx = strListMail.indexOf('', strListMail.length)
   let indxUp = strListMail.indexOf('.')
-  if (strListMail[indx - 2] != strListMail[indx - 1] && strListMail[indxUp] != strListMail[indxUp + 1] && strListMail[indxDown] != strListMail[indxDown + 1]) {
+
+  let strListMailIndx_2 = strListMail[indx - 2];
+  let strListMailIndx_1 = strListMail[indx - 1];
+  let strListMailIndxUp = strListMail[indxUp];
+  let strListMailIndxUp_1 = strListMail[indxUp + 1];
+  let strListMailIndxDown = strListMail[indxDown];
+  let strListMailIndxDown_1 = strListMail[indxDown + 1];
+
+  if (strListMailIndx_2 != strListMailIndx_1 && strListMailIndxUp != strListMailIndxUp_1 && strListMailIndxDown != strListMailIndxDown_1) {
 
    let arr = array.forEach((item, index) => {
     let arr2 = array.forEach((item, index) => {
@@ -160,14 +168,17 @@ function valid(strListMail) {
 }
 
 valid('timur-sdsada@outlook.com')
-valid('timur-sdsada@burtovoy.org')
+valid('timur-sdsada@burtovoy..org')
 valid('timur-sdsada@outlook.sidxte')
 valid('timur-sdsada@outlook.dancee')
 
 //ФУНКЦИЯ ВРЕМЕНИ
 let timeBack = (time) => {
-
-  if (time < 60) {
+  let minute = 60;
+  let hour = 1440;
+  let day = 525600;
+  
+  if (time < minute) {
     if (String(time)[String(time).length - 1] == '1' && time != 11) {
       return `${time} минуту назад`
     } else if (String(time)[String(time).length - 1] == '2' && String(time)[String(time).length - 2] != '1' || String(time)[String(time).length - 1] == '3' && String(time)[String(time).length - 2] != '1' || String(time)[String(time).length - 1] == '4' && String(time)[String(time).length - 2] != '1') {
@@ -175,9 +186,9 @@ let timeBack = (time) => {
     } else {
       return `${time} минут назад`
     }
-  } else if (time >= 60 && time < 1440) {
+  } else if (time >= minute && time < hour) {
     let timeHour = time / 60
-    timeHour = Math. trunc(timeHour)
+    timeHour = Math.trunc(timeHour)
     let times = time - (60 * timeHour)
     if (times < 30) {
       if (String(timeHour)[String(timeHour).length - 1] == '1' && String(timeHour)[String(timeHour).length - 2] != '1') {
@@ -197,7 +208,7 @@ let timeBack = (time) => {
         return `${timeHour} часов назад`
       }
     }
-  } else if (time <= 525600 && time >= 1440) {
+  } else if (time <= day && time >= hour) {
     let timeDay = time / 1440
     timeDay = Math.trunc(timeDay)
     if (String(timeDay)[String(timeDay).length - 1] == '1' && String(timeDay)[String(timeDay).length - 2] != '1') {
