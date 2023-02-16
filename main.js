@@ -268,6 +268,7 @@ console.log(hashtag("#Супертема"))
 console.log(hashtag("секунду #burtovoy"))
 console.log(hashtag("как ваше здоровье #медицина"))
 
+//функция цензуры
 let platformFilter = (str, array) => {
   let arrayResult = []
   str = str.toLowerCase()

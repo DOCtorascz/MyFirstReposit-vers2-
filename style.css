@@ -1,19 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body {
  font-family: "Lato", sans-serif;
 }
 
 .header {
  text-align: center;
+ min-width: 360px;
 }
 
 .header__images {
  margin-top: 24px;
+ margin-bottom: 22px;
 }
 
 .header__name {
  font-weight: 900;
  font-size: 32px;
  line-height: 38px;
+ margin-bottom: 24px;
 }
 
 .header__form{
@@ -45,5 +53,9 @@ body {
  border: 1px solid blue;
  border-radius: 10px;
  cursor: pointer;
+}
+
+.header > img{
+  width: 100%;
 }
 
