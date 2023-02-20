@@ -3,6 +3,8 @@
   padding: 0;
 }
 
+img{vertical-align: top;}
+
 body {
  font-family: "Lato", sans-serif;
 }
@@ -10,6 +12,7 @@ body {
 .header {
  text-align: center;
  min-width: 360px;
+ margin-bottom: 50px;
 }
 
 .header__images {
@@ -58,4 +61,135 @@ body {
 .header > img{
   width: 100%;
 }
+
+.comments{
+  padding: 0 16px;
+  border-bottom: 1px solid #E9E9E9;
+}
+
+.comments:last-child{
+  border-bottom: none;
+}
+
+.comments__name {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.inet{
+  padding-top: 24px;
+}
+
+.account__innet{
+  display: flex;
+}
+
+.comments__account{
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+}
+
+.account__images-inet{
+  margin-right: 16px;
+}
+
+.account__images{
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.account-name{
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.account-login{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ABACB1;
+  margin-bottom: 5px;
+}
+
+.account-message{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1D1E22;
+  max-width: 160px;
+  margin-bottom: 12px;
+}
+
+.comments__time-innet{
+  max-width: 67px;
+}
+
+.comments__account-up{
+  margin-left: 70px;
+}
+
+.comments__time{
+  font-size: 10px;
+  line-height: 12px;
+  color: #ABACB1;
+  text-align: end;
+}
+
+.fl{
+  display: flex;
+}
+
+.rg{
+  margin-right: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #B1B1B1;
+}
+
+.account__do{
+  display: flex;
+}
+
+footer{
+  text-align: center;
+}
+
+.footer__name{
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.footer__form-autoriz {
+  padding: 15px 75px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  background: blue;
+  margin-bottom: 16px;
+  border: 1px solid blue;
+  border-radius: 10px;
+  cursor: pointer;
+ }
+ 
+ .footer__form-open {
+  padding: 15px 137px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: blue;
+  background: white;
+  border: 1px solid blue;
+  border-radius: 10px;
+  cursor: pointer;
+ }
 
