@@ -3,6 +3,8 @@
   padding: 0;
 }
 
+img{vertical-align: top;}
+
 body {
  font-family: "Lato", sans-serif;
 }
@@ -57,5 +59,38 @@ body {
 
 .header > img{
   width: 100%;
+}
+
+.main-state{
+  margin-bottom: 42px;
+}
+
+.main-state__bg {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #0057FF;
+  color: white;
+}
+
+.main-state__registered-num{
+  padding-top: 32px;
+  max-width: 150px;
+}
+
+.main-state__registered-num:last-child {
+  margin-bottom: 32px;
+}
+
+.main-state__num{
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.main-state__name{
+  font-size: 18px;
+  line-height: 22px;
 }
 
