@@ -1,5 +1,5 @@
-//валидация email
-export function valid(strListMail) {
+//  валидация email
+export default function valid(strListMail) {
   let array = `.ru .org .com .academy .accountant .accountants .active 
   .actor .adult .aero .agency .airforce .apartments .app .archi .army .associates .asia .adult .aero 
   .attorney .auction .audio .autos .biz .cat .coop .dance 
@@ -9,57 +9,52 @@ export function valid(strListMail) {
   .pizza .place .plumbing .plus .poker .porn .post .press 
   .pro .productions .properties .property .qpon .racing .recipes .red .rehab .ren .rent .rentals
   .report .republican .rest .review .reviews .rich .site .tel .trade .travel .xxx .xyz 
-  .yoga .zone .ninja .art .moe .dev`
-  
-  array = array.split(' ')
+  .yoga .zone .ninja .art .moe .dev`;
 
- let strSlice = ''
- let res = 0
+  array = array.split(' ');
 
- for (let j = 0; j <= strListMail.length - 1; j++) {
-  let indx = strListMail.indexOf('@', j)
+  let strSlice = '';
+  let res = 0;
 
-  if (indx != -1) {
-   strSlice = strListMail.slice(indx)
-   strSlice = strSlice
+  for (let j = 0; j <= strListMail.length - 1; j += 1) {
+    const indx = strListMail.indexOf('@', j);
+
+    if (indx !== -1) {
+      strSlice = strListMail.slice(indx);
+    }
   }
- }
 
- for (let k = 0; k <= strSlice.length - 1; k++) {
-  let indxDown = strListMail.indexOf('@')
-  let indx = strListMail.indexOf('', strListMail.length)
-  let indxUp = strListMail.indexOf('.')
+  for (let k = 0; k <= strSlice.length - 1; k += 1) {
+    const indxDown = strListMail.indexOf('@');
+    let indx = strListMail.indexOf('', strListMail.length);
+    const indxUp = strListMail.indexOf('.');
 
-  let strListMailIndx_2 = strListMail[indx - 2];
-  let strListMailIndx_1 = strListMail[indx - 1];
-  let strListMailIndxUp = strListMail[indxUp];
-  let strListMailIndxUp_1 = strListMail[indxUp + 1];
-  let strListMailIndxDown = strListMail[indxDown];
-  let strListMailIndxDown_1 = strListMail[indxDown + 1];
+    const list = {
+      InTwo: strListMail[indx - 2],
+      InOne: strListMail[indx - 1],
+      InUp: strListMail[indxUp],
+      InUpOne: strListMail[indxUp + 1],
+      InDown: strListMail[indxDown],
+      InDownOne: strListMail[indxDown + 1],
+    };
 
-  if (strListMailIndx_2 != strListMailIndx_1 && strListMailIndxUp != strListMailIndxUp_1 && strListMailIndxDown != strListMailIndxDown_1) {
-
-   let arr = array.forEach((item, index) => {
-    let arr2 = array.forEach((item, index) => {
-     let indx = strSlice.indexOf(array[index])
-     if (indx != -1) {
-      res = 1
-     }
-    })
-   })
+    if (list.InTwo !== list.InOne && list.InUp !== list.InUpOne && list.InDown !== list.InDownOne) {
+      array.forEach(() => {
+        array.forEach((item, index) => {
+          indx = strSlice.indexOf(array[index]);
+          if (indx !== -1) {
+            res = 1;
+          }
+        });
+      });
+    }
   }
- }
 
- if (res == 1) {
-  console.log(true)
-  return true
- } else {
-  console.log(false)
-  return false
- }
+  if (res === 1) {
+    console.log(true);
+    return true;
+  } else {
+    console.log(false);
+    return false;
+  }
 }
-
-valid('timur-sdsada@outlook.com')
-valid('timur-sdsada@burtovoy..org')
-valid('timur-sdsada@outlook.sidxte')
-valid('timur-sdsada@outlook.dancee')
