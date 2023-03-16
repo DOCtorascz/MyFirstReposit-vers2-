@@ -1,29 +1,24 @@
 // функция хештегов
 export default function hashtag(str) {
-  let hashStr = null;
   const arrayStr = [];
-  let result = str;
+  const result = str.split(' ');
 
-  for (let i = 0; i <= str.length - 1; i += 1) {
-    const indx = str.indexOf('#', i);
-
-    if (indx !== -1) {
-      const indx2 = str.indexOf(' ', indx);
-      if (indx2 === -1) {
-        hashStr = str.slice(indx, str.length);
-        arrayStr.push(hashStr);
-        break;
+  cont: for (const item of result) {
+    for (let i = 0; i <= item.length - 1; i += 1) {
+      const indx = item.indexOf('#');
+      
+      if (indx !== -1) {
+        arrayStr.push(item.replace(item, `<a href="/search?tag=${item}">${item}</a>`));
+        continue cont;
+      } else {
+        arrayStr.push(item);
+        continue cont;
       }
-      hashStr = str.slice(indx, indx2);
-      arrayStr.push(hashStr);
     }
   }
 
-  const arrayFilt = arrayStr.filter((item, index) => arrayStr.indexOf(item) === index);
+  const joinStr = arrayStr.join(' ');
 
-  for (const item of arrayFilt) {
-    result = result.replace(item, `<a href="/search?tag=${item}">${item}</a>`);
-  }
-
-  return result;
+  console.log(joinStr);
+  return joinStr;
 }

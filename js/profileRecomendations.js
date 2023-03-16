@@ -1,5 +1,5 @@
 // функция рекомендаций
-const profileRecommendations = (profile, profiles, count) => {
+export default function profileRecomendations(profile, profiles, count) {
   let hashProfile = '';
   const arrayProfile = [];
   const numArr = [];
@@ -44,32 +44,6 @@ const profileRecommendations = (profile, profiles, count) => {
     }
   }
 
+  console.log(arrResult);
   return arrResult;
 };
-
-// console.log(profileRecommendations({
-//   id: 256,
-//   posts: [
-//     'Привет. #сегодня был на концерте группы #linkinpark',
-//     'как вам новая песня #linkinpark #ss'
-//   ]
-// },
-// [
-//   {
-//     id: 257,
-//     posts: [
-//      'Сегодня вышла новая версия #javascript',
-//      'как вам новая версия #ss #javascript'
-//      ]
-//    },
-//    {
-//     id: 258,
-//     posts: [
-//      '#сегодня мне не понравилась новая песня linkinpark #ss'
-//      ]
-//     }
-//   ],
-//   1
-// ));
-
-export default { profileRecommendations };

@@ -1,5 +1,5 @@
 // функция цензуры
-const platformFilter = (str, array) => {
+export default function platformFilter(str, array) {
   const arrayResult = [];
   str = str.toLowerCase();
   let strResult = str;
@@ -21,6 +21,5 @@ const platformFilter = (str, array) => {
     }
   }
   console.log(strResult);
+  return strResult;
 };
-
-export default { platformFilter };
