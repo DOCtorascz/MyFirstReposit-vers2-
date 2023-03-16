@@ -6,10 +6,10 @@ import hashtag from './hashtag.js';
 import platformFilter from './platformFilter.js';
 import profileRecommendations from './profileRecomendations.js';
 
-console.log(posSize);
-console.log(posReplace);
-console.log(valid);
-console.log(timeBack);
-console.log(hashtag);
-console.log(platformFilter);
-console.log(profileRecommendations);
+// console.log(posSize);
+// console.log(posReplace);
+// console.log(valid);
+// console.log(timeBack);
+// hashtag('#привет#приветs ')
+// console.log(platformFilter);
+// console.log(profileRecommendations);

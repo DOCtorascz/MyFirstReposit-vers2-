@@ -5,8 +5,8 @@
   "description": "",
   "main": "code.js",
   "scripts": {
-    "test": "mocha ./tests/*.test.js",
-    "lint": "./node_modules/.bin/eslint **/*.js"
+    "test": "npx mocha tests",
+    "lint": "npx eslint ."
   },
   "repository": {
     "type": "git",

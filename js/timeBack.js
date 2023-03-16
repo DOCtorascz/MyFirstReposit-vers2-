@@ -1,5 +1,5 @@
 //  ФУНКЦИЯ ВРЕМЕНИ
-const timeBack = (time) => {
+export default function timeBack(time) {
   const minute = 60;
   const hour = 1440;
   const day = 525600;
@@ -48,5 +48,3 @@ const timeBack = (time) => {
     return 'более года назад';
   }
 };
-
-export default { timeBack };
