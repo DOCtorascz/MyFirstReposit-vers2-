@@ -3,19 +3,14 @@ export default function hashtag(str) {
   const arrayStr = [];
   const result = str.split(' ');
 
-  cont: for (const item of result) {
-    for (let i = 0; i <= item.length - 1; i += 1) {
-      const indx = item.indexOf('#');
-      
-      if (indx !== -1) {
-        arrayStr.push(item.replace(item, `<a href="/search?tag=${item}">${item}</a>`));
-        continue cont;
-      } else {
-        arrayStr.push(item);
-        continue cont;
-      }
+  result.forEach((element) => {
+    const indx = element.indexOf('#');
+    if (indx !== -1) {
+      arrayStr.push(element.replace(element, `<a href="/search?tag=${element}">${element}</a>`));
+    } else if (element !== '') {
+      arrayStr.push(element);
     }
-  }
+  });
 
   const joinStr = arrayStr.join(' ');
 

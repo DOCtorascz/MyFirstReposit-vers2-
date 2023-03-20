@@ -19,11 +19,6 @@ describe('Функция валидации email', function () {
   });
   it('разные домены', function () {
     const expectedResult = true;
-    const result = valid('timur@mail.online');
-    assert.equal(expectedResult, result);
-  });
-  it('разные домены', function () {
-    const expectedResult = true;
     const result = valid('timur@mail.rich');
     assert.equal(expectedResult, result);
   });
