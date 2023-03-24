@@ -16,18 +16,17 @@ export default function posSize(message) {
   let num = 0;
   let result = null;
 
-  for (const item of arrayDomen) {
-    for (const item2 in arrayMessage) {
-      const indx = arrayMessage[item2].indexOf(item);
+  arrayDomen.forEach((item) => {
+    arrayMessage.forEach((element, index) => {
+      const indx = element.indexOf(item);
       if (indx !== -1) {
-        num += arrMess[item2].length;
+        num += arrMess[index].length;
       }
-    }
-  }
+    });
+  });
 
   result = message.length - num;
 
   console.log(result);
   return result;
 }
-posSize('Привет! https://gЛДОТithub.party https://githuОООb.rich ЧТО ЭТО ТАКОЕ https://gitАФЫАhub.xxx');

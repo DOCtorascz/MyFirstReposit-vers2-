@@ -1,7 +1,8 @@
 // функция цензуры
 export default function platformFilter(str, array) {
   const arrayResult = [];
-  str = str.toLowerCase();
+  str.toLowerCase();
+
   let strResult = str;
   for (let i = 0; i <= array.length - 1; i += 1) {
     for (let j = 0; j <= str.length - 1; j += 1) {
@@ -22,4 +23,5 @@ export default function platformFilter(str, array) {
   }
   console.log(strResult);
   return strResult;
-};
+}
+platformFilter('Да вы что?? охуели охуели там?', ['охуели']);

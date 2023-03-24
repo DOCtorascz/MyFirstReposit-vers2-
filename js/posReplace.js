@@ -14,14 +14,14 @@ export default function posReplace(message) {
   const arrMess = message.split(' ');
   const arrayMessage = message.split(' ');
 
-  for (const item of arrayDomen) {
-    for (const item2 in arrayMessage) {
-      const indx = arrayMessage[item2].indexOf(item);
+  arrayDomen.forEach((item) => {
+    arrayMessage.forEach((element, index) => {
+      const indx = element.indexOf(item);
       if (indx !== -1) {
-        arrMess[item2] = arrMess[item2].replace(arrMess[item2], `<a href="${arrMess[item2]}">${arrMess[item2]}</a>`);
+        arrMess[index] = arrMess[index].replace(arrMess[index], `<a href="${arrMess[index]}">${arrMess[index]}</a>`);
       }
-    }
-  }
+    });
+  });
 
   const joinStr = arrMess.join(' ');
 
