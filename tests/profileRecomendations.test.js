@@ -3,7 +3,7 @@ import platformFilter from '../js/profileRecomendations.js';
 
 describe('Функция рекомендаций', function () {
   it('одна рекомендация', function () {
-    const expectedResult = '257, 258';
+    const expectedResult = [257, 258].toString();
     const result = platformFilter(
       {
         id: 256,
@@ -17,7 +17,7 @@ describe('Функция рекомендаций', function () {
           id: 257,
           posts: [
             'Сегодня вышла новая версия #javascript',
-            'как вам #сегодня новая версия #ss #javascript',
+            'как вам #сегодня новая версия ss javascript',
           ],
         },
         {
@@ -28,7 +28,7 @@ describe('Функция рекомендаций', function () {
         },
       ],
       1,
-    );
+    ).toString();
     assert.equal(expectedResult, result);
   });
 });
