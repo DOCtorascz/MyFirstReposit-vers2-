@@ -335,7 +335,7 @@ footer{
   }
   .commentaries {
     width: 50%;
-    margin: 0;
+    margin: 0 auto;
   }
   .account__innet {
     justify-content: flex-start;
