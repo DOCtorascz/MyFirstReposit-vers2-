@@ -321,3 +321,26 @@ footer{
     margin-left: 74px;
   }
  }
+ @media (min-width: 1200px) {
+  .header__content{
+    max-width: 300px;
+  }
+  .header__name {
+    font-size: 30px;
+    line-height: 51px;
+    margin-bottom: 30px;
+  }
+  .main-state__bg {
+    left: 25%;
+  }
+  .commentaries {
+    width: 50%;
+    margin: 0;
+  }
+  .account__innet {
+    justify-content: flex-start;
+  }
+  .comments__account {
+    width: 100%;
+  }
+ }
