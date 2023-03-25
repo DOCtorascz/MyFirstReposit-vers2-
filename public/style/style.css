@@ -244,9 +244,14 @@ footer{
  }
 
  @media (min-width: 640px) {
+  body {
+    font-family: "Lato", sans-serif;
+    background: #00000005;
+  }
   .header {
     display: flex;
     justify-content: center;
+    background: white;
   }
   .header__images {
     text-align: left;
@@ -310,6 +315,9 @@ footer{
   .commentaries {
     width: 370px;
     margin: 0 auto;
-    border: 1px solid #0000001f;
+    background: white;
+  }
+  .comments__account-up {
+    margin-left: 74px;
   }
  }
