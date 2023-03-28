@@ -3,8 +3,8 @@ import platformFilter from '../js/profileRecomendations.js';
 
 describe('Функция рекомендаций', function () {
   it('одна рекомендация', function () {
-    let expectedResult = [257, 258];
-    let result = platformFilter(
+    const expectedResult = [257, 258];
+    const result = platformFilter(
       {
         id: 256,
         posts: [
@@ -29,12 +29,12 @@ describe('Функция рекомендаций', function () {
       ],
       1,
     );
-    expectedResult.forEach(item => {
-      result.forEach(item2 => {
+    expectedResult.forEach((item) => {
+      result.forEach((item2) => {
         if (item === item2) {
           assert.equal(item, item2);
         }
-      })
-    })
+      });
+    });
   });
 });
