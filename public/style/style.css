@@ -249,6 +249,8 @@ footer{
     background: #00000005;
   }
   .header {
+    width: 640px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     background: white;
@@ -282,6 +284,8 @@ footer{
   }
   .main-state {
     position: relative;
+    width: 640px;
+    margin: 0 auto;
   }
   .main-state__bg {
     flex-direction: row;
@@ -321,7 +325,7 @@ footer{
     margin-left: 74px;
   }
  }
- @media (min-width: 1200px) {
+ /* @media (min-width: 1200px) {
   .header__content{
     max-width: 300px;
   }
@@ -343,4 +347,4 @@ footer{
   .comments__account {
     width: 100%;
   }
- }
+ } */
