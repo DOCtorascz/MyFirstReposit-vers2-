@@ -5,8 +5,12 @@
 
 img{vertical-align: top;}
 
+li {
+  list-style: none;
+}
+
 body {
- font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
  
 .header {
@@ -59,6 +63,100 @@ body {
 
 .header > img{
   width: 100%;
+}
+
+.commentaries{
+  display: flex;
+  justify-content: space-between;
+}
+
+.comments__innet{
+  background: white;
+  margin-right: 16px;
+}
+
+.comments__innet2{
+  width: 312px;
+}
+
+.actual{
+  background: white;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+
+.name {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 32px;  
+}
+
+.name-theme{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+
+.info__theme{
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.country, 
+.message{
+  margin-left: 8px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.message {
+  color: #ABACB1;
+}
+
+.bloger{
+  background: white;
+  padding: 8px 16px;
+}
+
+.bloger__inner{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.icon__theme02,
+.name__bloger{
+  margin-right: 8px;
+}
+
+.country{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.countrys{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.read{
+  background: none;
+  padding: 6px 15px;
+  border: 1px solid blue;
+  color: blue;
+  border-radius: 10px;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+.countryHach{
+  font-size: 12px;
+  line-height: 16px;
+  color: #ABACB1;
 }
 
 .main-state{
@@ -228,31 +326,29 @@ footer{
  @media (min-width: 420px) {
   .account__innet {
     justify-content: center;
+    justify-content: flex-start;
   }
   .account-message {
     max-width: none;
   }
-  .comments__account-up {
-    margin-left: 99px;
-  }
  }
 
- @media (min-width: 560px) {
-  .comments__account-up {
-    margin-left: 170px;
+ @media(min-width: 0px) {
+  .comments__innet2{
+    display: none;
   }
  }
-
  @media (min-width: 640px) {
+  .comments__innet2{
+    display: block;
+  }
   body {
     font-family: "Lato", sans-serif;
     background: #00000005;
   }
   .header {
-    width: 640px;
-    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     background: white;
   }
   .header__images {
@@ -261,7 +357,7 @@ footer{
   }
   .header > img {
     width: 50%;
-    margin-left: 60px;
+    margin-left: 5px;
   }
   .header__name {
     font-weight: 600;
@@ -302,7 +398,7 @@ footer{
   }
   .main-state__registered-num {
     padding-top: 0;
-    margin-right: 50px;
+    margin-right: 150px;
   }
   .main-state__num {
     font-weight: 400;
@@ -317,34 +413,65 @@ footer{
     margin-bottom: 200px;
   }
   .commentaries {
-    width: 370px;
+    max-width: 935px;
     margin: 0 auto;
-    background: white;
   }
   .comments__account-up {
     margin-left: 74px;
   }
  }
- /* @media (min-width: 1200px) {
+ @media (min-width: 1200px) {
+  .header{
+    height: 640px;
+  }
+  .header > img {
+    max-width: 631px;
+  }
+  .header__images{
+    margin-left: 0;
+  }
   .header__content{
-    max-width: 300px;
+    margin-right: 10px;
   }
   .header__name {
-    font-size: 30px;
-    line-height: 51px;
-    margin-bottom: 30px;
+    max-width: 410px;
+    text-align: left;
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 32px;
+  }
+  .header__form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header__form-autoriz {
+    padding: 13px 40px;
+  }
+  .header__form-open{
+    padding: 13px 98px;
+  }
+  .main-state {
+    margin-bottom: 280px;
+    width: 775px;
+    margin-right: 37%;
   }
   .main-state__bg {
-    left: 25%;
-  }
-  .commentaries {
-    width: 50%;
-    margin: 0 auto;
-  }
-  .account__innet {
-    justify-content: flex-start;
-  }
-  .comments__account {
     width: 100%;
+    padding: 64px 80px;
+    justify-content: center;
+    max-width: none;
   }
- } */
+  .main-state__num{
+    font-weight: 300;
+    font-size: 72px;
+    line-height: 86px;
+  }
+  .main-state__registered-num {
+    font-size: 18px;
+    max-width: 160px;
+  }
+  .main-state__num{
+    margin-bottom: 16px;
+  }
+ }

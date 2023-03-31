@@ -7,8 +7,8 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="style/style.css">
+ <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="../public/style/style.css">
  <script crossorigin src="assets/index.js" type="module"></script>
  <title>Document</title>
 </head>
@@ -40,7 +40,7 @@
         <p class="main-state__name">Пользователей зарегистрировано</p>
       </div>
       <div class="main-state__registered-num">
-        <p class="main-state__num">140К</p>
+        <p class="main-state__num">140<span>K</span></p>
         <p class="main-state__name">Сообщений написано</p>
       </div>
       <div class="main-state__registered-num">
@@ -52,164 +52,259 @@
  </main>
 
  <section class="commentaries">
-  <main class="comments">
-    <div class="container">
-      <h1 class="comments__name">
-        Последние сообщения
-      </h1>
-      <div class="inet">
-        <div class="account__innet">
-          <div class="account__images-inet">
-            <img class="account__images" src="img/image9.jpg" alt="лого">
-          </div>
-          <div class="comments__account">
-            <div class="comments__account-info">
-              <div class="account-name">Евгений Ройзман</div>
-              <div class="account-login">@roizmangbn</div>
+  <div class="comments__innet">
+    <main class="comments">
+      <div class="container">
+        <h1 class="comments__name">
+          Последние сообщения
+        </h1>
+        <div class="inet">
+          <div class="account__innet">
+            <div class="account__images-inet">
+              <img class="account__images" src="img/image9.jpg" alt="лого">
             </div>
-            <div class="comments__time-innet">
-              <p class="comments__time">28 минут назад</p>
+            <div class="comments__account">
+              <div class="comments__account-info">
+                <div class="account-name">Евгений Ройзман</div>
+                <div class="account-login">@roizmangbn</div>
+              </div>
+              <div class="comments__time-innet">
+                <p class="comments__time">28 минут назад</p>
+              </div>
+            </div>
+          </div>
+          <div class="comments__account-up">
+            <div class="account-message">Пробежал десятку по набережной. Снег идёт, тихо, светло.
+              Всё будет хорошо.</div>
+            <div class="account__do">
+              <div class="account__repost fl">
+                <img class="repost__images rg" src="img/Vector1.svg" alt="repost">
+                <p class="repost__numbers rg">21</p>
+              </div>
+              <div class="accoint__likes fl">
+                <img class="likes__images rg" src="img/Vector2.svg" alt="repost">
+                <p class="likes__numbers rg">23</p>
+              </div>
+              <div class="account__downloads fl">
+                <img class="download__images rg" src="img/Vector3.svg" alt="repost">
+                <p class="download__number rg">9</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="comments__account-up">
-          <div class="account-message">Пробежал десятку по набережной. Снег идёт, тихо, светло.
-            Всё будет хорошо.</div>
-          <div class="account__do">
-            <div class="account__repost fl">
-              <img class="repost__images rg" src="img/Vector1.svg" alt="repost">
-              <p class="repost__numbers rg">21</p>
+      </div>
+    </main>
+    
+    <div class="comments">
+      <div class="container">
+        <div class="inet">
+          <div class="account__innet">
+            <div class="account__images-inet">
+              <img class="account__images" src="img/image5.jpg" alt="лого">
             </div>
-            <div class="accoint__likes fl">
-              <img class="likes__images rg" src="img/Vector2.svg" alt="repost">
-              <p class="likes__numbers rg">23</p>
+            <div class="comments__account">
+              <div class="comments__account-info">
+                <div class="account-name">Elon Musk</div>
+                <div class="account-login">@elonmusk</div>
+              </div>
+              <div class="comments__time-innet">
+                <p class="comments__time">12 часов назад</p>
+              </div>
             </div>
-            <div class="account__downloads fl">
-              <img class="download__images rg" src="img/Vector3.svg" alt="repost">
-              <p class="download__number rg">9</p>
+          </div>
+          <div class="comments__account-up">
+            <div class="account-message">Has anyone seen web3? I can’t find it.</div>
+            <div class="account__do">
+              <div class="account__repost fl">
+                <img class="repost__images rg" src="img/Vector1.svg" alt="repost">
+                <p class="repost__numbers rg">21</p>
+              </div>
+              <div class="accoint__likes fl">
+                <img class="likes__images rg" src="img/Vector2.svg" alt="repost">
+                <p class="likes__numbers rg">23</p>
+              </div>
+              <div class="account__downloads fl">
+                <img class="download__images rg" src="img/Vector3.svg" alt="repost">
+                <p class="download__number rg">9</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-   </main>
-  
-   <div class="comments">
-    <div class="container">
-      <div class="inet">
-        <div class="account__innet">
-          <div class="account__images-inet">
-            <img class="account__images" src="img/image5.jpg" alt="лого">
-          </div>
-          <div class="comments__account">
-            <div class="comments__account-info">
-              <div class="account-name">Elon Musk</div>
-              <div class="account-login">@elonmusk</div>
+    
+    <div class="comments">
+      <div class="container">
+        <div class="inet">
+          <div class="account__innet">
+            <div class="account__images-inet">
+              <img class="account__images" src="img/image7.jpg" alt="лого">
             </div>
-            <div class="comments__time-innet">
-              <p class="comments__time">12 часов назад</p>
-            </div>
-          </div>
-        </div>
-        <div class="comments__account-up">
-          <div class="account-message">Has anyone seen web3? I can’t find it.</div>
-          <div class="account__do">
-            <div class="account__repost fl">
-              <img class="repost__images rg" src="img/Vector1.svg" alt="repost">
-              <p class="repost__numbers rg">21</p>
-            </div>
-            <div class="accoint__likes fl">
-              <img class="likes__images rg" src="img/Vector2.svg" alt="repost">
-              <p class="likes__numbers rg">23</p>
-            </div>
-            <div class="account__downloads fl">
-              <img class="download__images rg" src="img/Vector3.svg" alt="repost">
-              <p class="download__number rg">9</p>
+            <div class="comments__account">
+              <div class="comments__account-info">
+                <div class="account-name">Sports.ru</div>
+                <div class="account-login">@sportsru</div>
+              </div>
+              <div class="comments__time-innet">
+                <p class="comments__time">2 часа назад</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-   </div>
-  
-   <div class="comments">
-    <div class="container">
-      <div class="inet">
-        <div class="account__innet">
-          <div class="account__images-inet">
-            <img class="account__images" src="img/image7.jpg" alt="лого">
-          </div>
-          <div class="comments__account">
-            <div class="comments__account-info">
-              <div class="account-name">Sports.ru</div>
-              <div class="account-login">@sportsru</div>
-            </div>
-            <div class="comments__time-innet">
-              <p class="comments__time">2 часа назад</p>
-            </div>
-          </div>
-        </div>
-        <div class="comments__account-up">
-          <div class="account-message">Кстати, год назад сборная была на 39-м месте. Прорыв!
-            А лидер рейтинга вновь не поменялся.</div>
-            <img src="img/image6.jpg" alt="photos"  width="220">
-          <div class="account__do">
-            <div class="account__repost fl">
-              <img class="repost__images rg" src="img/Vector1.svg" alt="repost">
-              <p class="repost__numbers rg">21</p>
-            </div>
-            <div class="accoint__likes fl">
-              <img class="likes__images rg" src="img/Vector2.svg" alt="repost">
-              <p class="likes__numbers rg">23</p>
-            </div>
-            <div class="account__downloads fl">
-              <img class="download__images rg" src="img/Vector3.svg" alt="repost">
-              <p class="download__number rg">9</p>
+          <div class="comments__account-up">
+            <div class="account-message">Кстати, год назад сборная была на 39-м месте. Прорыв!
+              А лидер рейтинга вновь не поменялся.</div>
+              <img src="img/image6.jpg" alt="photos"  width="220">
+            <div class="account__do">
+              <div class="account__repost fl">
+                <img class="repost__images rg" src="img/Vector1.svg" alt="repost">
+                <p class="repost__numbers rg">21</p>
+              </div>
+              <div class="accoint__likes fl">
+                <img class="likes__images rg" src="img/Vector2.svg" alt="repost">
+                <p class="likes__numbers rg">23</p>
+              </div>
+              <div class="account__downloads fl">
+                <img class="download__images rg" src="img/Vector3.svg" alt="repost">
+                <p class="download__number rg">9</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-   </div>
-  
-   <div class="comments">
-    <div class="container">
-      <div class="inet">
-        <div class="account__innet">
-          <div class="account__images-inet">
-            <img class="account__images" src="img/image8.jpg" alt="лого">
+    
+    <div class="comments">
+      <div class="container">
+        <div class="inet">
+          <div class="account__innet">
+            <div class="account__images-inet">
+              <img class="account__images" src="img/image8.jpg" alt="лого">
+            </div>
+            <div class="comments__account">
+              <div class="comments__account-info">
+                <div class="account-name">Евгений Ройзман</div>
+                <div class="account-login">@roizmangbn</div>
+              </div>
+              <div class="comments__time-innet">
+                <p class="comments__time">28 минут назад</p>
+              </div>
+            </div>
           </div>
-          <div class="comments__account">
-            <div class="comments__account-info">
-              <div class="account-name">Евгений Ройзман</div>
-              <div class="account-login">@roizmangbn</div>
-            </div>
-            <div class="comments__time-innet">
-              <p class="comments__time">28 минут назад</p>
-            </div>
-          </div>
-        </div>
-        <div class="comments__account-up">
-          <div class="account-message">Пробежал десятку по набережной. Снег идёт, тихо, светло.
-            Всё будет хорошо.</div>
-          <div class="account__do">
-            <div class="account__repost fl">
-              <img class="repost__images rg" src="img/Vector1.svg" alt="repost">
-              <p class="repost__numbers rg">21</p>
-            </div>
-            <div class="accoint__likes fl">
-              <img class="likes__images rg" src="img/Vector2.svg" alt="repost">
-              <p class="likes__numbers rg">23</p>
-            </div>
-            <div class="account__downloads fl">
-              <img class="download__images rg" src="img/Vector3.svg" alt="repost">
-              <p class="download__number rg">9</p>
+          <div class="comments__account-up">
+            <div class="account-message">Пробежал десятку по набережной. Снег идёт, тихо, светло.
+              Всё будет хорошо.</div>
+            <div class="account__do">
+              <div class="account__repost fl">
+                <img class="repost__images rg" src="img/Vector1.svg" alt="repost">
+                <p class="repost__numbers rg">21</p>
+              </div>
+              <div class="accoint__likes fl">
+                <img class="likes__images rg" src="img/Vector2.svg" alt="repost">
+                <p class="likes__numbers rg">23</p>
+              </div>
+              <div class="account__downloads fl">
+                <img class="download__images rg" src="img/Vector3.svg" alt="repost">
+                <p class="download__number rg">9</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-   </div>
+  </div>
+  <div class="comments__innet2">
+    <div class="actual">
+      <h2 class="name">Актуальные темы</h2>
+      <ul class="list-actual">
+        <li class="actual">
+          <p class="name-theme">Новый Год 2022</p>
+          <div class="info__theme">
+            <img src="../public/img/Vector4.svg" alt="" class="icon__theme">
+            <a href="#">
+              <p class="country">Мир</p>
+            </a>
+            <p class="message">2 941 сообщение</p>
+          </div>
+        </li>
+        <li class="actual">
+          <p class="name-theme">BTS</p>
+          <div class="info__theme">
+            <img src="../public/img/Vector4.svg" alt="" class="icon__theme">
+            <a href="#">
+              <p class="country">Мир</p>
+            </a>
+            <p class="message">2 941 сообщение</p>
+          </div>
+        </li>
+        <li class="actual">
+          <p class="name-theme">Украина</p>
+          <div class="info__theme">
+            <img src="../public/img/Vector4.svg" alt="" class="icon__theme">
+            <a href="#">
+              <p class="country">Россия</p>
+            </a>
+            <p class="message">958 186 сообщений</p>
+          </div>
+        </li>
+        <li class="actual">
+          <p class="name-theme">Дудь</p>
+          <div class="info__theme">
+            <img src="../public/img/Vector4.svg" alt="" class="icon__theme">
+            <a href="#">
+              <p class="country">Россия</p>
+            </a>
+            <p class="message">4 185 сообщений</p>
+          </div>
+        </li>
+        <li class="actual">
+          <p class="name-theme">ЛГБТ</p>
+          <div class="info__theme">
+            <img src="../public/img/Vector4.svg" alt="" class="icon__theme">
+            <a href="#">
+              <p class="country">Россия</p>
+            </a>
+            <p class="message">482 сообщения</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="bloger">
+      <h2 class="name">Интересные блогеры</h2>
+      <ul class="list__bloger">
+        <li class="bloger">
+          <div class="bloger__inner">
+            <img src="../public/img/Ellipse01.jpg" alt="" class="icon__theme02">
+            <div class="name__bloger">
+              <p class="countrys">Хабр Научпоп</p>
+              <p class="countryHach">@habr_popsci</p>
+            </div>
+            <button class="read">читать</button>
+          </div>
+        </li>
+        <li class="bloger">
+          <div class="bloger__inner">
+            <img src="../public/img/Ellipse02.jpg" alt="" class="icon__theme02">
+            <div class="name__bloger">
+              <p class="countrys">Матч ТВ</p>
+              <p class="countryHach">@MatchTV</p>
+            </div>
+            <button class="read" style="
+            margin-left: 14%;"">читать</button>
+          </div>
+        </li>
+        <li class="bloger">
+            <div class="bloger__inner">
+            <img src="../public/img/Ellipse03.jpg" alt="" class="icon__theme02">
+            <div class="name__bloger">
+              <p class="countrys">Популярная меха...</p>
+              <p class="countryHach">@PopMechanica</p>
+            </div>
+            <button class="read">читать</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
  </section>
 
  <footer>
