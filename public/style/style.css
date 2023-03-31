@@ -462,7 +462,7 @@ footer{
     justify-content: center;
     max-width: none;
   }
-  .main-state__num{
+  .main-state__num{ 
     font-weight: 300;
     font-size: 72px;
     line-height: 86px;
