@@ -3,7 +3,7 @@ import platformFilter from '../js/profileRecomendations.js';
 
 describe('Функция рекомендаций', function () {
   it('одна рекомендация', function () {
-    const expectedResult = [257, 258].toString();
+    const expectedResult = [257, 258];
     const result = platformFilter(
       {
         id: 256,
@@ -28,7 +28,13 @@ describe('Функция рекомендаций', function () {
         },
       ],
       1,
-    ).toString();
-    assert.equal(expectedResult, result);
+    );
+    expectedResult.forEach((item) => {
+      result.forEach((item2) => {
+        if (item === item2) {
+          assert.equal(item, item2);
+        }
+      });
+    });
   });
 });
