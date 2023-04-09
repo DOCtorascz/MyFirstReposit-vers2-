@@ -3,187 +3,289 @@
   padding: 0;
 }
 
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 img{vertical-align: top;}
 
+li {
+  list-style: none;
+}
+
 body {
- font-family: "Lato", sans-serif;
-}
- 
-.header {
- text-align: center;
- min-width: 360px;
+  font-family: 'Lato', sans-serif;
+  background: #F4F5F7;
 }
 
-.header__images {
- margin-top: 24px;
- margin-bottom: 22px;
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
-.header__name {
- font-weight: 900;
- font-size: 32px;
- line-height: 38px;
- margin-bottom: 24px;
-}
-
-.header__form{
- margin-bottom: 24px;
-}
-
-.header__form-autoriz {
- padding: 15px 75px;
- font-family: inherit;
- font-weight: 700;
- font-size: 18px;
- line-height: 22px;
- color: white;
- background: blue;
- margin-bottom: 16px;
- border: 1px solid blue;
- border-radius: 10px;
- cursor: pointer;
-}
-
-.header__form-open {
- padding: 15px 137px;
- font-family: inherit;
- font-weight: 700;
- font-size: 18px;
- line-height: 22px;
- color: blue;
- background: white;
- border: 1px solid blue;
- border-radius: 10px;
- cursor: pointer;
-}
-
-.header > img{
-  width: 100%;
-}
-
-.main-state{
-  margin-bottom: 42px;
-}
-
-.main-state__bg {
-  text-align: center;
-  align-items: center;
+.header__inner{
   display: flex;
-  flex-direction: column;
-  background-color: #0057FF;
-  color: white;
+  align-items: center;
+  justify-content: space-between
 }
 
-.main-state__registered-num{
-  padding-top: 32px;
-  max-width: 150px;
+.header__content{
+  max-width: 410px;
+  margin-right: 10px;
 }
 
-.main-state__registered-num:last-child {
+.header__images{
   margin-bottom: 32px;
 }
 
-.main-state__num{
-  font-weight: 400;
+.header__name{
+  font-weight: 900;
   font-size: 48px;
   line-height: 58px;
+  margin-bottom: 32px;
+}
+
+.formBT{
+  width: 260px;
+  background: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #0057FF;
+  border: 1px solid #0057FF;
+  border-radius: 10px;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.header__form-autoriz {
+  background: #0057FF;
+  color: white;
+  margin-bottom: 17px;
+}
+
+.main-state__bg{
+  max-width: 970px;
+  margin: 0 auto;
+  background: #0057FF;
+  display: flex;
+  color: white;
+  justify-content: center;
+  padding: 32px 5px;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.main-state__registered-num{
+  margin-right: 100px;
+}
+
+.main-state__registered-num:last-child{
+  margin-right: 0px;
+}
+
+.main-state__num{
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 86px;
+  margin-bottom: 30px;
 }
 
 .main-state__name{
   font-size: 18px;
   line-height: 22px;
+  max-width: 200px;
 }
 
-.comments{
-  padding: 0 16px;
-  border-bottom: 1px solid #E9E9E9;
+.comments__innet {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-.comments:last-child{
-  border-bottom: none;
-}
-
-.comments__name {
+.comments__name{
   font-weight: 900;
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 36px;
+  line-height: 43px;
+  margin-bottom: 24px;
 }
 
-.inet{
-  padding-top: 24px;
-}
-
-.account__innet{
+.innet-block{
   display: flex;
+  justify-content: space-between;
+}
+
+.commets__persone{
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  flex-basis: 632px;
 }
 
 .comments__account{
   display: flex;
-  justify-content: space-between;
-  width: 260px;
+  align-items: flex-start;
+  margin-bottom: 30px;
 }
 
-.account__images-inet{
+.account-page{
+  border-radius: 50%;
   margin-right: 16px;
 }
 
-.account__images{
-  border-radius: 30px;
-  overflow: hidden;
+.comments__info-account{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.account-name{
-  font-weight: 900;
-  font-size: 14px;
-  line-height: 18px;
-}
-
-.account-login{
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  color: #ABACB1;
+.comments__account-name{
+  display: flex;
+  align-items: center;
   margin-bottom: 5px;
 }
 
-.account-message{
+.comments__account-name p{
+  margin-right: 16px;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.comments__account-name p:last-child{
+  margin-right: 5px;
+  font-size: 16px;
+  line-height: 24px;
   font-weight: 400;
+  color: #ABACB1;
+}
+
+.comments__page{
+  flex-basis: 100%;
+}
+
+.comments__time-back{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ABACB1;
+}
+
+.comments__text p{
   font-size: 16px;
   line-height: 19px;
   color: #1D1E22;
-  max-width: 160px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
-.comments__time-innet{
-  max-width: 67px;
-}
-
-.comments__account-up{
-  margin-left: 70px;
-}
-
-.comments__time{
-  font-size: 10px;
-  line-height: 12px;
-  color: #ABACB1;
-  text-align: end;
-}
-
-.fl{
+.comments__state{
   display: flex;
+  align-items: center;
 }
 
-.rg{
-  margin-right: 20px;
-  font-weight: 400;
+.comments__state img{
+  margin-right: 13px;
+}
+
+.comments__state span{
+  margin-right: 65px;
   font-size: 14px;
   line-height: 24px;
   color: #B1B1B1;
 }
 
-.account__do{
+.comments__state:last-child{
+  margin-right: 0;
+}
+
+.tenis{
+  margin-bottom: 20px;
+}
+
+.comments__actual{
+  flex-basis: 312px;
+  margin-left: 5px;
+}
+
+.actual-themes{
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.actual-themes__name{
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 13px;
+}
+
+.menu-themes__list-name{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 3px;
+}
+
+.menu-themes__list-message {
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #ABACB1;
+}
+
+.blogers{
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.blogers__name{
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 13px;
+}
+
+.menu-bloger__list{
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.menu-bloger__list img {
+  margin-right: 16px;
+}
+
+.blogers__info{
+  display: flex;
+  align-items: center;
+}
+
+.bloger__name{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.bloger__hach{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ABACB1;
+}
+
+.blogers__read button{
+  background: none;
+  border: 1px solid blue;
+  padding: 6px 12px;
+  border-radius: 10px;
+  color: blue;
+  cursor: pointer;
 }
 
 footer{
@@ -210,9 +312,9 @@ footer{
   border: 1px solid blue;
   border-radius: 10px;
   cursor: pointer;
- }
+}
 
- .footer__form-open {
+.footer__form-open {
   padding: 15px 137px;
   font-family: inherit;
   font-weight: 700;
@@ -223,4 +325,110 @@ footer{
   border: 1px solid blue;
   border-radius: 10px;
   cursor: pointer;
- }
+}
+
+@media (max-width: 1000px) {
+  .header__images {
+    margin-bottom: 20px;
+  }
+  .header__page {
+    max-width: 50%;
+  }
+  .header__name {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 905px) {
+  .comments__actual {
+    display: none;
+  }
+  .innet-block {
+    justify-content: center;
+  }
+}
+@media (max-width: 725px) {
+  .header{
+    padding-top: 24px;
+  }
+  .container {
+    padding: 0;
+  }
+  .header__page {
+    width: 100%;
+  }
+  .header__content {
+    max-width: none;
+    text-align: center;
+    margin-right: none;
+  }
+  .header__inner {
+    display: block;
+  }
+  .header__inner {
+    flex-direction: column;
+  }
+  .main-state__bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-state__registered-num {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .main-state__num {
+    margin-bottom: 5px;
+  }
+  .header__page {
+    max-width: none;
+  }
+  .main-state__name {
+    max-width: none;
+  }
+}
+
+@media (max-width: 655px) {
+  .tenis {
+    width: 80%;
+  }
+}
+
+@media (max-width: 555px) {
+  .header__form{
+    margin-bottom: 24px;
+  }
+  .comments__account-name {
+    display: block;
+  }
+  .comments__info-account{
+    align-items: flex-start;
+  }
+  .comments__state span {
+    margin-right: 33px;
+  }
+  .footer__name {
+    font-size: 25px;
+    line-height: 26px;
+  }
+  .footer__form-autoriz {
+    padding: 15px 40px;
+  }
+  .footer__form-open {
+    padding: 15px 103px;
+  }
+  .commets__persone {
+    padding: 10px;
+  }
+  .comments{
+    background: white;
+    padding-top: 20px;
+  }
+  .main-state__bg {
+    margin-bottom: 0;
+  }
+  footer{
+    padding-bottom: 36px;
+  }
+}
