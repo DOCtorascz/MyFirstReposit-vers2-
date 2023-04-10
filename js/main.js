@@ -6,6 +6,8 @@ import hashtag from './hashtag.js';
 import platformFilter from './platformFilter.js';
 import profileRecomendations from './profileRecomendations.js';
 
+const headerFormAutoriz = document.querySelector('.header__form-autoriz')
+
 posSize('Привет! https://gЛДОТithub.party https://githuОООb.rich ЧТО ЭТО ТАКОЕ https://gitАФЫАhub.xxx');
 posReplace('as.plus fdsf f.rest ');
 valid('timu@mail.online');
@@ -37,3 +39,15 @@ profileRecomendations(
   ],
   5,
 );
+
+function popupOpen() {
+  const popup = document.querySelector('.popup')
+
+  popup.setAttribute('style', 'opacity: 1; visibility: visible;')
+}
+
+headerFormAutoriz.addEventListener('click', (event) => {
+  event.preventDefault()
+})
+
+headerFormAutoriz.addEventListener('click', popupOpen)

@@ -337,6 +337,8 @@ footer{
   background: rgba(0, 0, 0, 0.6);
   top: 0;
   left: 0;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .popup__inner{
@@ -345,11 +347,16 @@ footer{
   padding: 16px 17px;
 }
 
+.nameReg{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
 .popup__name{
   font-weight: 900;
   font-size: 24px;
   line-height: 28px;
-  margin-bottom: 24px;
 }
 
 .fr{
