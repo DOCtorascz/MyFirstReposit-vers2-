@@ -260,16 +260,28 @@
       <div class="popup__registr">
         <p class="popup__name">Регистрация</p>
         <form class="form-registr" action="#">
-          <input type="text" class="form-registr__nick">
-          <input type="text" class="form-registr__email">
-          <input type="text" class="form-registr__password">
-          <input type="text" class="form-registr__password-replace">
-          <button class="header__form-autoriz formBT">Зарегистрироваться</button>
+          <label class="inp">
+            <p>Логин</p>
+            <input type="text" class="form-registr__nick fr" placeholder="Логин">
+          </label>
+          <label class="inp">
+            <p>Email</p>
+            <input type="text" class="form-registr__email fr" placeholder="Почта">
+          </label>
+          <label class="inp">
+            <p>Пароль</p>
+            <input type="text" class="form-registr__password fr" placeholder="Пароль">
+          </label>
+          <label class="inp">
+            <p>Подтверждение пароля</p>
+            <input type="text" class="form-registr__password-replace fr" placeholder="Подтверждение пароля">
+          </label>
+          <button class="header__form-autoriz formBT registr">Зарегистрироваться</button>
         </form>
       </div>
     </div>
   </div>
-  
+
  <script src="../js/main.js" type="module"></script>
 </body>
 
