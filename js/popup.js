@@ -30,7 +30,6 @@ function keyboard() {
         formContent[i].setAttribute('style', 'opacity: 1; visibility: visible;');
       } else {
         formContent[i].setAttribute('style', 'opacity: 0; visibility: hidden;');
-        
       }
     });
   }
