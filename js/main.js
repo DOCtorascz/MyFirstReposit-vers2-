@@ -8,7 +8,8 @@ import profileRecomendations from './profileRecomendations.js';
 
 const headerFormAutoriz = document.querySelector('.header__form-autoriz')
 const popup = document.querySelector('.popup')
-const popupClose = document.querySelector('.popup__name-item')
+const popupClose = document.querySelector('.popup__name-images')
+const body = document.querySelector('body')
 
 posSize('Привет! https://gЛДОТithub.party https://githuОООb.rich ЧТО ЭТО ТАКОЕ https://gitАФЫАhub.xxx');
 posReplace('as.plus fdsf f.rest ');
@@ -49,18 +50,19 @@ function popupOpen() {
 }
 
 function popupCloses() {
-  popupClose.addEventListener('click', () => {
-    bodyLock()
-    popup.setAttribute('style', 'opacity: 0; visibility: hidden;')
-    let body = document.querySelector('body')
-    body.setAttribute('class', 'false')
+  window.addEventListener('click', (e) => {
+    console.log(e.target)
+    if (e.target === popup || e.target === popupClose) {
+      bodyLock()
+      popup.setAttribute('style', 'opacity: ; visibility: hidden;')
+      body.setAttribute('class', 'false')
+    }
   })
 }
 
 function bodyLock() {
   const scrollWidth = window.innerWidth - document.querySelector('body').offsetWidth + 'px'
 
-  const body = document.querySelector('body')
   body.setAttribute('class', 'disable__scroll')
 
   const getStylePadding = window.getComputedStyle(body).paddingRight
