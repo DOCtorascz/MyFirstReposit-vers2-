@@ -388,7 +388,8 @@ footer{
   color: #B1B1B1;
   top: -13px;
   left: 15px;
-  opacity: 1;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .disable__scroll{
@@ -500,5 +501,8 @@ footer{
   }
   footer{
     padding-bottom: 36px;
+  }
+  .popup {
+    align-items: flex-end;
   }
 }
