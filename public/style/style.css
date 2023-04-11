@@ -18,7 +18,7 @@ li {
 body {
   font-family: 'Lato', sans-serif;
   background: #F4F5F7;
-  padding-right: 0px;
+  padding-right: 0;
 }
 
 .container {
@@ -329,6 +329,7 @@ footer{
 }
 
 .popup {
+  transition: 500ms;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -6,11 +6,6 @@ import hashtag from './hashtag.js';
 import platformFilter from './platformFilter.js';
 import profileRecomendations from './profileRecomendations.js';
 
-const headerFormAutoriz = document.querySelector('.header__form-autoriz')
-const popup = document.querySelector('.popup')
-const popupClose = document.querySelector('.popup__name-images')
-const body = document.querySelector('body')
-
 posSize('Привет! https://gЛДОТithub.party https://githuОООb.rich ЧТО ЭТО ТАКОЕ https://gitАФЫАhub.xxx');
 posReplace('as.plus fdsf f.rest ');
 valid('timu@mail.online');
@@ -42,41 +37,3 @@ profileRecomendations(
   ],
   5,
 );
-
-function popupOpen() {
-  bodyLock()
-
-  popup.setAttribute('style', 'opacity: 1; visibility: visible;')
-}
-
-function popupCloses() {
-  window.addEventListener('click', (e) => {
-    console.log(e.target)
-    if (e.target === popup || e.target === popupClose) {
-      bodyLock()
-      popup.setAttribute('style', 'opacity: ; visibility: hidden;')
-      body.setAttribute('class', 'false')
-    }
-  })
-}
-
-function bodyLock() {
-  const scrollWidth = window.innerWidth - document.querySelector('body').offsetWidth + 'px'
-
-  body.setAttribute('class', 'disable__scroll')
-
-  const getStylePadding = window.getComputedStyle(body).paddingRight
-
-  if (parseInt(getStylePadding) === 0) {
-    body.setAttribute('style', `padding-right: ${scrollWidth}`)
-  } else {
-    body.setAttribute('style', `padding-right: 0`)
-  }
-}
-
-headerFormAutoriz.addEventListener('click', (event) => {
-  event.preventDefault()
-})
-
-popupCloses()
-headerFormAutoriz.addEventListener('click', popupOpen)
