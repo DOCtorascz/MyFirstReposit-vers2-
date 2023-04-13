@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import hashtag from '../public/js/hashtag.js';
+import hashtag from '../js/hashtag.js';
 
 describe('Функция хештегов', function () {
   it('строка с одним хештегом', function () {

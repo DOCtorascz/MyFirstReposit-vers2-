@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import platformFilter from '../public/js/profileRecomendations.js';
+import platformFilter from '../js/profileRecomendations.js';
 
 describe('Функция рекомендаций', function () {
   it('одна рекомендация', function () {

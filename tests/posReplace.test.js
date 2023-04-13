@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import posReplace from '../public/js/posReplace.js';
+import posReplace from '../js/posReplace.js';
 
 describe('Функция поиска ссылок', function () {
   it('одна ссылка', function () {
