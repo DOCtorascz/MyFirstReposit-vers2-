@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import platformFilter from '../js/platformFilter.js';
+import platformFilter from '../public/js/platformFilter.js';
 
 describe('Функция цензуры', function () {
   it('одно слово', function () {

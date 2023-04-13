@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import posSize from '../js/posSize.js';
+import posSize from '../public/js/posSize.js';
 
 describe('Функция подсчёта символов без ссылок', function () {
   it('одна ссылка', function () {
