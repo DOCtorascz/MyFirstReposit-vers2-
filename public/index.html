@@ -255,7 +255,38 @@
       </form>
   </footer>
 
- <script src="../js/main.js" type="module"></script>
+  <div class="popup">
+    <div class="popup__inner">
+      <div class="popup__registr">
+        <div class="nameReg">
+          <p class="popup__name">Регистрация</p>
+          <a class="popup__name-item" href="#"><img class="popup__name-images" src="img/closePopup.svg" alt="close"></a>
+        </div>
+        <form class="form-registr" action="#">
+          <label class="inp">
+            <p class="name__content">Логин</p>
+            <input type="text" class="form-registr__nick fr" placeholder="Логин">
+          </label>
+          <label class="inp">
+            <p class="name__content">Email</p>
+            <input type="text" class="form-registr__email fr" placeholder="Почта">
+          </label>
+          <label class="inp">
+            <p class="name__content">Пароль</p>
+            <input type="text" class="form-registr__password fr" placeholder="Пароль">
+          </label>
+          <label class="inp">
+            <p class="name__content">Подтверждение пароля</p>
+            <input type="text" class="form-registr__password-replace fr" placeholder="Подтверждение пароля">
+          </label>
+          <button class="header__form-autoriz formBT registr">Зарегистрироваться</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/popup.js" type="module"></script>
+  <script src="../js/main.js" type="module"></script>
 </body>
 
 </html>

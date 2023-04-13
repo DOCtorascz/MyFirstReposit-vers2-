@@ -18,6 +18,7 @@ li {
 body {
   font-family: 'Lato', sans-serif;
   background: #F4F5F7;
+  padding-right: 0;
 }
 
 .container {
@@ -327,6 +328,76 @@ footer{
   cursor: pointer;
 }
 
+.popup {
+  transition: 500ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popup__inner{
+  max-width: 362px;
+  background: white;
+  padding: 16px 17px;
+}
+
+.nameReg{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.popup__name{
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.fr{
+  border: 1px solid #DFDFDF;
+  border-radius: 10px;
+  padding: 15px 16px;
+  font-size: 18px;
+  line-height: 22px;
+  color: black;
+  margin-bottom: 24px;
+  min-width: 100%;
+}
+
+.registr{
+  min-width: 100%;
+}
+
+.inp{
+  position: relative;
+}
+
+.inp p {
+  position: absolute;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 11px;
+  color: #B1B1B1;
+  top: -13px;
+  left: 15px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.disable__scroll{
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
 @media (max-width: 1000px) {
   .header__images {
     margin-bottom: 20px;
@@ -430,5 +501,8 @@ footer{
   }
   footer{
     padding-bottom: 36px;
+  }
+  .popup {
+    align-items: flex-end;
   }
 }
