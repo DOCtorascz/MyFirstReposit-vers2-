@@ -398,6 +398,21 @@ footer{
   height: 100vh;
 }
 
+.popup2{
+  transition: 500ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
 @media (max-width: 1000px) {
   .header__images {
     margin-bottom: 20px;
@@ -504,5 +519,12 @@ footer{
   }
   .popup {
     align-items: flex-end;
+  }
+  .popup2 {
+    align-items: flex-end;
+  }
+  .popup__inner{
+    max-width: none;
+    border-radius: 25px;
   }
 }

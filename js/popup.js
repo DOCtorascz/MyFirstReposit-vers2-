@@ -1,7 +1,10 @@
 const headerFormAutoriz = document.querySelector('.header__form-autoriz');
 const footerFormAutoriz = document.querySelector('.footer__form-autoriz');
+const headerFormAutoriz2 = document.querySelector('.header__form-open');
+const footerFormAutoriz2 = document.querySelector('.footer__form-open');
 const popup = document.querySelector('.popup');
-const popupClose = document.querySelector('.popup__name-images');
+const popup2 = document.querySelector('.popup2');
+const popupClose = document.querySelectorAll('.popup__name-images');
 const body = document.querySelector('body');
 const formContent = document.querySelectorAll('.name__content');
 const formRegistr = document.querySelectorAll('.fr');
@@ -41,6 +44,17 @@ function popupOpenHead() {
   keyboard();
 }
 
+function popupOpenAutoriz() {
+  bodyLock();
+  popup2.setAttribute('style', 'opacity: 1; visibility: visible;');
+  keyboard();
+}
+
+function popupFootAutoriz() {
+  popupOpenAutoriz();
+  keyboard();
+}
+
 function popupOpenFooter() {
   popupOpenHead();
   keyboard();
@@ -48,10 +62,21 @@ function popupOpenFooter() {
 
 function popupCloses() {
   window.addEventListener('click', (e) => {
-    if (e.target === popup || e.target === popupClose) {
+    if (e.target === popup || e.target === popupClose[0]) {
       e.preventDefault();
       bodyLock();
       popup.setAttribute('style', 'opacity: ; visibility: hidden;');
+      body.setAttribute('class', 'false');
+    }
+  });
+}
+
+function popupClosesAutoriz() {
+  window.addEventListener('click', (e) => {
+    if (e.target === popup2 || e.target === popupClose[1]) {
+      e.preventDefault();
+      bodyLock();
+      popup2.setAttribute('style', 'opacity: ; visibility: hidden;');
       body.setAttribute('class', 'false');
     }
   });
@@ -66,5 +91,8 @@ footerFormAutoriz.addEventListener('click', (e) => {
 });
 
 popupCloses();
+popupClosesAutoriz();
 headerFormAutoriz.addEventListener('click', popupOpenHead);
 footerFormAutoriz.addEventListener('click', popupOpenFooter);
+headerFormAutoriz2.addEventListener('click', popupOpenAutoriz);
+footerFormAutoriz2.addEventListener('click', popupFootAutoriz);
