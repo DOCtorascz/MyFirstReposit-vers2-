@@ -385,8 +385,14 @@ footer{
   font-weight: 400;
   font-size: 9px;
   line-height: 11px;
-  color: #B1B1B1;
-  top: -13px;
+  left: 15px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.name__content__err {
+  color: #ff0000;
+  top: 37px;
   left: 15px;
   opacity: 0;
   visibility: hidden;

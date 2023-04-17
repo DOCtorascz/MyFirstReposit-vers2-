@@ -1,12 +1,14 @@
-const headerFormAutoriz = document.querySelector('.header__form-autoriz');
-const footerFormAutoriz = document.querySelector('.footer__form-autoriz');
-const headerFormAutoriz2 = document.querySelector('.header__form-open');
-const footerFormAutoriz2 = document.querySelector('.footer__form-open');
+import valid from './valid.js';
+
+const headerFormAutoriz = document.querySelectorAll('.regPopup');
+const headerFormAutoriz2 = document.querySelectorAll('.openPopup');
+const headerFormRegistr = document.querySelector('.registr');
 const popup = document.querySelector('.popup');
 const popup2 = document.querySelector('.popup2');
 const popupClose = document.querySelectorAll('.popup__name-images');
 const body = document.querySelector('body');
 const formContent = document.querySelectorAll('.name__content');
+const formContentErr = document.querySelectorAll('.name__content__err');
 const formRegistr = document.querySelectorAll('.fr');
 
 function bodyLock() {
@@ -50,16 +52,6 @@ function popupOpenAutoriz() {
   keyboard();
 }
 
-function popupFootAutoriz() {
-  popupOpenAutoriz();
-  keyboard();
-}
-
-function popupOpenFooter() {
-  popupOpenHead();
-  keyboard();
-}
-
 function popupCloses() {
   window.addEventListener('click', (e) => {
     if (e.target === popup || e.target === popupClose[0]) {
@@ -82,17 +74,47 @@ function popupClosesAutoriz() {
   });
 }
 
-headerFormAutoriz.addEventListener('click', (event) => {
-  event.preventDefault();
+document.addEventListener('click', (e) => {
+  if (e.target === headerFormAutoriz[0] || e.target === headerFormAutoriz[1]) {
+    e.preventDefault();
+    bodyLock();
+    popupOpenHead();
+  }
 });
 
-footerFormAutoriz.addEventListener('click', (e) => {
-  e.preventDefault();
+document.addEventListener('click', (e) => {
+  if (e.target === headerFormAutoriz2[0] || e.target === headerFormAutoriz2[1]) {
+    e.preventDefault();
+    bodyLock();
+    popupOpenAutoriz();
+  }
+});
+
+document.addEventListener('click', (e) => {
+  if (e.target === headerFormRegistr) {
+    e.preventDefault();
+    for (let j = 0; j <= headerFormRegistr.parentNode.children.length - 2; j += 1) {
+      const valueInput = headerFormRegistr.parentNode.children[j].children[1];
+      const valueInput2 = headerFormRegistr.parentNode.children[2].children[1].value;
+
+      if (j === 1 && valid(valueInput.value) !== true) {
+        valueInput.setAttribute('style', 'background: #FF97C3; border: 1px solid red;');
+        formContentErr[j].setAttribute('style', 'opacity: 1; visibility: visible;');
+      } else if (j === 1 && valid(valueInput.value) === true) {
+        valueInput.setAttribute('style', 'background: white; border: 1px solid #DFDFDF;');
+        formContentErr[j].setAttribute('style', 'opacity: 0; visibility: hidden;');
+      }
+
+      if (valueInput.value !== valueInput2 && j === 3) {
+        valueInput.setAttribute('style', 'background: #FF97C3; border: 1px solid red;');
+        formContentErr[j].setAttribute('style', 'opacity: 1; visibility: visible;');
+      } else if (valueInput.value === valueInput2) {
+        valueInput.setAttribute('style', 'background: white; border: 1px solid #DFDFDF;');
+        formContentErr[j].setAttribute('style', 'opacity: 0; visibility: hidden;');
+      }
+    }
+  }
 });
 
 popupCloses();
 popupClosesAutoriz();
-headerFormAutoriz.addEventListener('click', popupOpenHead);
-footerFormAutoriz.addEventListener('click', popupOpenFooter);
-headerFormAutoriz2.addEventListener('click', popupOpenAutoriz);
-footerFormAutoriz2.addEventListener('click', popupFootAutoriz);

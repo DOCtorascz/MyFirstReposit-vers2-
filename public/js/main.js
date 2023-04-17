@@ -1,6 +1,6 @@
 import posSize from './posSize.js';
 import posReplace from './posReplace.js';
-import valid from './valid.js';
+// import valid from './valid.js';
 import timeBack from './timeBack.js';
 import hashtag from './hashtag.js';
 import platformFilter from './platformFilter.js';
@@ -8,7 +8,7 @@ import profileRecomendations from './profileRecomendations.js';
 
 posSize('Привет! https://gЛДОТithub.party https://githuОООb.rich ЧТО ЭТО ТАКОЕ https://gitАФЫАhub.xxx');
 posReplace('as.plus fdsf f.rest ');
-valid('timu@mail.online');
+// valid('asd');
 timeBack(5);
 hashtag('#привет#приветs ');
 platformFilter('блядь', ['блядь']);

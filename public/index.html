@@ -27,8 +27,8 @@
             когда их нет рядом
           </h1>
           <form class="header__form" action="#">
-            <button class="header__form-autoriz formBT">Зарегистрироваться</button>
-            <button class="header__form-open formBT">Войти</button> 
+            <button class="header__form-autoriz formBT regPopup">Зарегистрироваться</button>
+            <button class="header__form-open formBT openPopup">Войти</button> 
           </form>
         </div>
         <img class="header__page" src="img/log.jpg" alt="page">
@@ -250,8 +250,8 @@
       и узнайте обо всём первым
       </h1>
       <form class="footer__form" action="#">
-        <button class="footer__form-autoriz">Зарегистрироваться</button>
-        <button class="footer__form-open">Войти</button>
+        <button class="footer__form-autoriz regPopup">Зарегистрироваться</button>
+        <button class="footer__form-open openPopup">Войти</button>
       </form>
   </footer>
 
@@ -266,18 +266,22 @@
           <label class="inp">
             <p class="name__content">Логин</p>
             <input type="text" class="form-registr__nick fr" placeholder="Логин">
+            <p class="name__content__err">Неверный логин</p>
           </label>
           <label class="inp">
             <p class="name__content">Email</p>
             <input type="text" class="form-registr__email fr" placeholder="Почта">
+            <p class="name__content__err">Неверная почта</p>
           </label>
           <label class="inp">
             <p class="name__content">Пароль</p>
             <input type="text" class="form-registr__password fr" placeholder="Пароль">
+            <p class="name__content__err">Неверный пароль</p>
           </label>
           <label class="inp">
             <p class="name__content">Подтверждение пароля</p>
             <input type="text" class="form-registr__password-replace fr" placeholder="Подтверждение пароля">
+            <p class="name__content__err">Пароли не совпадают</p>
           </label>
           <button class="header__form-autoriz formBT registr">Зарегистрироваться</button>
         </form>
@@ -307,8 +311,8 @@
     </div>
   </div>
 
-  <script src="/js/popup.js" type="module"></script>
-  <script src="../js/main.js" type="module"></script>
+  <script src="js/popup.js" type="module"></script>
+  <script src="js/main.js" type="module"></script>
 </body>
 
 </html>
