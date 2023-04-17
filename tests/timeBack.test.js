@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import timeBack from '../js/timeBack.js';
+import timeBack from '../public/js/timeBack.js';
 
 describe('Функция времени', function () {
   it('1', function () {
