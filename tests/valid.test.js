@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import valid from '../js/valid.js';
+import valid from '../public/js/valid.js';
 
 describe('Функция валидации email', function () {
   it('одна почта', function () {

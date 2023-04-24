@@ -27,17 +27,21 @@ export default function valid(strListMail) {
   }
 
   arrayDomen.forEach((item) => {
-    const indx = arrayStr[0].indexOf(`${item}`);
-    if (indx !== -1) {
-      const indxDoth = arrayStr[0].slice(indx - 1);
-      if (indxDoth[0] !== '.') {
-        num += 1;
+    let indx = null;
+
+    if (arrayStr.length !== 0) {
+      indx = arrayStr[0].indexOf(`${item}`);
+
+      if (indx !== -1) {
+        const indxDoth = arrayStr[0].slice(indx - 1);
+        if (indxDoth[0] !== '.') {
+          num += 1;
+        }
       }
     }
   });
 
   const result = num === 2;
 
-  console.log(result);
   return result;
 }
