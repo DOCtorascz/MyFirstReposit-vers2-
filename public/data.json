@@ -1,0 +1,80 @@
+{
+  "static": [{
+    "numPerson": 481,
+    "nameCell": "Пользователей зарегистрировано"
+  }, {
+    "numMessage": "140K",
+    "nameCell": "Сообщений написано"
+  }, {
+    "numMessage": "389",
+    "nameCell": "Написано сегодня"
+  }],
+  "lastMessages": [{
+    "namePerson": "Elon Musk",
+    "login": "@elonmusk",
+    "timeAgo": "28 минут назад",
+    "repost": "21",
+    "like": "23",
+    "loaded": "9",
+    "comment": "Has anyone seen web3? I can’t find it."
+  },
+  {
+    "namePerson": "Alexandr",
+    "login": "@alex",
+    "timeAgo": "28 минут назад",
+    "repost": "21",
+    "like": "23",
+    "loaded": "9",
+    "comment": "Играл в настольный теннис. Очень устал. Тренировка была в осиновом на работу ног."
+  },
+  {
+    "namePerson": "Alexandr",
+    "login": "@alex",
+    "timeAgo": "28 минут назад",
+    "repost": "21",
+    "like": "23",
+    "loaded": "9",
+    "comment": "Прикладываю фотки с последнего матча. С каждым днем играю все лучше. Еще пару лет и можно на Олимпиаду ехать!"
+  },
+  {
+    "namePerson": "Mia",
+    "login": "@mia",
+    "timeAgo": "40 минут назад",
+    "repost": "21",
+    "like": "23",
+    "loaded": "9",
+    "comment": "Has anyone seen web3? I can’t find it."
+  }],
+  "topics": [{
+    "themeName": "#javascript",
+    "themeMessage": "2 941 сообщение"
+  },
+  {
+    "themeName": "#python3",
+    "themeMessage": "29 718 сообщений"
+  },
+  {
+    "themeName": "#ruby",
+    "themeMessage": "2 941 сообщение"
+  },
+  {
+    "themeName": "#как_научиться_коду?",
+    "themeMessage": "958 186 сообщений"
+  },
+  {
+    "themeName": "#помогите_с_кодом",
+    "themeMessage": "4 185 сообщений"
+  }],
+  "blogs": [{
+    "blogsName": "Хабр Научпоп",
+    "blogsMessage": "@habr_popsci"
+  },
+  {
+    "blogsName": "Матч ТВ",
+    "blogsMessage": "@MatchTV"
+  },
+  {
+    "blogsName": "Популярная меха...",
+    "blogsMessage": "@PopMechanica"
+  }]
+}
