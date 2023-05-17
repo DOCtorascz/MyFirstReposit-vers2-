@@ -10,40 +10,60 @@
     "nameCell": "Написано сегодня"
   }],
   "lastMessages": [{
+    "idPerson": "1",
+    "imgUrl": "img/images.jpg",
     "namePerson": "Elon Musk",
     "login": "@elonmusk",
     "timeAgo": "28 минут назад",
     "repost": "21",
     "like": "23",
     "loaded": "9",
-    "comment": "Has anyone seen web3? I can’t find it."
+    "comment": "Has anyone seen web3? I can’t find it.",
+    "imgRepost": "img/Vector1.svg",
+    "imgLike": "img/Vector2.svg",
+    "imgLoaded": "img/Vector3.svg"
   },
   {
+    "idPerson": "2",
+    "imgUrl": "img/image9.jpg",
     "namePerson": "Alexandr",
     "login": "@alex",
     "timeAgo": "28 минут назад",
     "repost": "21",
     "like": "23",
     "loaded": "9",
-    "comment": "Играл в настольный теннис. Очень устал. Тренировка была в осиновом на работу ног."
+    "comment": "Играл в настольный теннис. Очень устал. Тренировка была в осиновом на работу ног.",
+    "imgRepost": "img/Vector1.svg",
+    "imgLike": "img/Vector2.svg",
+    "imgLoaded": "img/Vector3.svg"
   },
   {
+    "idPerson": "3",
+    "imgUrl": "img/image9.jpg",
     "namePerson": "Alexandr",
     "login": "@alex",
     "timeAgo": "28 минут назад",
     "repost": "21",
     "like": "23",
     "loaded": "9",
-    "comment": "Прикладываю фотки с последнего матча. С каждым днем играю все лучше. Еще пару лет и можно на Олимпиаду ехать!"
+    "comment": "Прикладываю фотки с последнего матча. С каждым днем играю все лучше. Еще пару лет и можно на Олимпиаду ехать!",
+    "imgRepost": "img/Vector1.svg",
+    "imgLike": "img/Vector2.svg",
+    "imgLoaded": "img/Vector3.svg"
   },
   {
+    "idPerson": "4",
+    "imgUrl": "img/imagei.jpg",
     "namePerson": "Mia",
     "login": "@mia",
     "timeAgo": "40 минут назад",
     "repost": "21",
     "like": "23",
     "loaded": "9",
-    "comment": "Has anyone seen web3? I can’t find it."
+    "comment": "Has anyone seen web3? I can’t find it.",
+    "imgRepost": "img/Vector1.svg",
+    "imgLike": "img/Vector2.svg",
+    "imgLoaded": "img/Vector3.svg"
   }],
   "topics": [{
     "themeName": "#javascript",
