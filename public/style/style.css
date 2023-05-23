@@ -419,6 +419,14 @@ footer{
   visibility: hidden;
 }
 
+.repl img{
+  filter: blur(20px);
+}
+
+.repl div{
+  filter: blur(2px);
+}
+
 @media (max-width: 1000px) {
   .header__images {
     margin-bottom: 20px;

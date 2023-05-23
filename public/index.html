@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="style/style.css">
- <script crossorigin src="assets/index.js" type="module"></script>
- <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <script crossorigin src="assets/index.js" type="module"></script>
+  <title>Document</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
           </h1>
           <form class="header__form" action="#">
             <button class="header__form-autoriz formBT regPopup">Зарегистрироваться</button>
-            <button class="header__form-open formBT openPopup">Войти</button> 
+            <button class="header__form-open formBT openPopup">Войти</button>
           </form>
         </div>
         <img class="header__page" src="img/log.jpg" alt="page">
@@ -63,7 +63,97 @@
         </div>
         <div class="innet-block">
           <div class="commets__persone">
-            
+            <!-- добавляем заглушку -->
+            <div class="repl">
+              <div class="comments__account">
+                <img class="account-page" src="img/Ellipse01.jpg" alt="account">
+                <div class="comments__page">
+                  <div class="comments__info-account">
+                    <div class="comments__account-name">
+                      <p>${element.namePerson}</p>
+                      <p>${element.login}</p>
+                    </div>
+                    <div class="comments__time-back">
+                      <p>${element.timeAgo}</p>
+                    </div>
+                  </div>
+                  <div class="comments__text">
+                    <p>${element.comment}</p>
+                    <div class="comments__state">
+                      <img src="img/Ellipse01.jpg" alt="twit"><span>${element.repost}</span>
+                      <img src="img/Ellipse01.jpg" alt="twit"><span>${element.like}</span>
+                      <img src="img/Ellipse01.jpg" alt="twit"><span>${element.loaded}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="comments__account">
+                <img class="account-page" src="img/Ellipse01.jpg" alt="account">
+                <div class="comments__page">
+                  <div class="comments__info-account">
+                    <div class="comments__account-name">
+                      <p>${element.namePerson}</p>
+                      <p>${element.login}</p>
+                    </div>
+                    <div class="comments__time-back">
+                      <p>${element.timeAgo}</p>
+                    </div>
+                  </div>
+                  <div class="comments__text">
+                    <p>${element.comment}</p>
+                    <div class="comments__state">
+                      <img src="img/Ellipse01.jpg" alt="twit"><span>${element.repost}</span>
+                      <img src="img/Ellipse01.jpg" alt="twit"><span>${element.like}</span>
+                      <img src="img/Ellipse01.jpg" alt="twit"><span>${element.loaded}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="comments__account">
+                <img class="account-page" src="img/Ellipse01.jpg" alt="account">
+                <div class="comments__page">
+                  <div class="comments__info-account">
+                    <div class="comments__account-name">
+                      <p>${element.namePerson}</p>
+                      <p>${element.login}</p>
+                    </div>
+                    <div class="comments__time-back">
+                      <p>${element.timeAgo}</p>
+                    </div>
+                  </div>
+                  <div class="comments__text">
+                    <p>${element.comment}</p>
+                    <div class="comments__state">
+                      <img src="img/Ellipse01.jpg" alt="twit"><span>${element.repost}</span>
+                      <img src="img/Ellipse01.jpg" alt="twit"><span>${element.like}</span>
+                      <img src="img/Ellipse01.jpg" alt="twit"><span>${element.loaded}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="comments__account">
+                <img class="account-page" src="img/Ellipse01.jpg" alt="account">
+                <div class="comments__page">
+                  <div class="comments__info-account">
+                    <div class="comments__account-name">
+                      <p>${element.namePerson}</p>
+                      <p>${element.login}</p>
+                    </div>
+                    <div class="comments__time-back">
+                      <p>${element.timeAgo}</p>
+                    </div>
+                  </div>
+                  <div class="comments__text">
+                    <p>${element.comment}</p>
+                    <div class="comments__state">
+                      <img src="img/Ellipse01.jpg" alt="twit"><span>${element.repost}</span>
+                      <img src="img/Ellipse01.jpg" alt="twit"><span>${element.like}</span>
+                      <img src="img/Ellipse01.jpg" alt="twit"><span>${element.loaded}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="comments__actual">
             <div class="actual-themes">
@@ -153,16 +243,16 @@
       </div>
     </div>
   </section>
- 
+
   <footer>
     <h1 class="footer__name">
       Зарегистрируйтесь
       и узнайте обо всём первым
-      </h1>
-      <form class="footer__form" action="#">
-        <button class="footer__form-autoriz regPopup">Зарегистрироваться</button>
-        <button class="footer__form-open openPopup">Войти</button>
-      </form>
+    </h1>
+    <form class="footer__form" action="#">
+      <button class="footer__form-autoriz regPopup">Зарегистрироваться</button>
+      <button class="footer__form-open openPopup">Войти</button>
+    </form>
   </footer>
 
   <div class="popup">
@@ -202,23 +292,23 @@
   <div class="popup2">
     <div class="popup__inner">
       <div class="popup__autoriz popup__registr"">
-        <div class="nameReg">
-          <p class="popup__name">Авторизация</p>
-          <a class="popup__name-item" href="#"><img class="popup__name-images" src="img/closePopup.svg" alt="close"></a>
-        </div>
-        <form class="form-registr" action="#">
-          <label class="inp">
-            <p class="name__content">Логин</p>
-            <input type="text" class="form-registr__nick fr" placeholder="Логин">
-          </label>
-          <label class="inp">
-            <p class="name__content">Пароль</p>
-            <input type="text" class="form-registr__email fr" placeholder="Почта">
-          </label>
-          <button class="header__form-autoriz formBT registr">Войти</button>
-        </form>
+        <div class=" nameReg">
+        <p class="popup__name">Авторизация</p>
+        <a class="popup__name-item" href="#"><img class="popup__name-images" src="img/closePopup.svg" alt="close"></a>
       </div>
+      <form class="form-registr" action="#">
+        <label class="inp">
+          <p class="name__content">Логин</p>
+          <input type="text" class="form-registr__nick fr" placeholder="Логин">
+        </label>
+        <label class="inp">
+          <p class="name__content">Пароль</p>
+          <input type="text" class="form-registr__email fr" placeholder="Почта">
+        </label>
+        <button class="header__form-autoriz formBT registr">Войти</button>
+      </form>
     </div>
+  </div>
   </div>
 
   <script src="js/popup.js" type="module"></script>
