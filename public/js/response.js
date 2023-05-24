@@ -7,6 +7,11 @@ const mainStateName = document.querySelectorAll('.main-state__name');
 const commetsPersone = document.querySelector('.commets__persone');
 
 function response() {
+  // убераем заглушку перед рендером
+
+  const replPlug = document.querySelector('.repl');
+  replPlug.setAttribute('style', 'display: none');
+
   const url = 'data.json';
   // const urlPages = 'pictures.json';
   let strLastMessage = '';
