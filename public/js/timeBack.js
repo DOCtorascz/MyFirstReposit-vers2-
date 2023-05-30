@@ -89,6 +89,6 @@ export default function timeBack(time) {
     result = 'более года назад';
   }
 
-  console.log(result);
+  // console.log(result);
   return result;
 }
