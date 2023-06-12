@@ -27,6 +27,10 @@
     "mocha": "^10.2.0"
   },
   "dependencies": {
-    "chai": "^4.3.7"
+    "chai": "^4.3.7",
+    "express": "^4.18.2",
+    "node-readability": "^3.0.0",
+    "pg": "^8.11.0",
+    "readability": "^0.1.0"
   }
 }
