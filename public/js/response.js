@@ -32,7 +32,7 @@ function response() {
 
       removeDom();
       render(info);
-      // setInterval(() => render(info), 5000);
+      setInterval(() => render(info), 5000);
     });
 }
 
