@@ -16,11 +16,11 @@ function response() {
   const url2 = 'posts.json';
 
   fetch(url2)
-  .then((respon) => respon.json())
-  .then((info) => {
-    removeDom();
-    render(info);
-  });
+    .then((respon) => respon.json())
+    .then((info) => {
+      removeDom();
+      render(info);
+    });
 
   fetch(url)
     .then((respon) => respon.json())
@@ -37,7 +37,6 @@ function response() {
           mainStateName[i].textContent = element.nameCell;
         }
       });
-
     });
 }
 

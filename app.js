@@ -29,7 +29,6 @@ await client.connect();
 // await client.query('ALTER TABLE mess DROP COLUMN mess_id');
 // await client.query('DELETE FROM mess WHERE mess_id=5');
 // await client.query('ALTER TABLE mess ADD COLUMN imgUrl text');
-// await client.query("INSERT INTO mess (mess_id, imgUrl, namePerson, login, timeAgo, repost, likes, loaded, comment, imgRepost, imgLike, imgLoaded) OVERRIDING SYSTEM VALUE VALUES ('4', 'img/imagei.jpg', 'Mia', '@mia', '2000', '21', '23', '9', 'Has anyone seen web3? I can’t find it.', 'img/Vector1.svg', 'img/Vector2.svg', 'img/Vector3.svg')")
 
 const objSelect = await client.query('SELECT *FROM mess');
 
