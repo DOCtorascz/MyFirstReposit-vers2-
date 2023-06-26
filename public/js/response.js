@@ -13,6 +13,14 @@ function response() {
   }
 
   const url = 'data.json';
+  const url2 = 'posts.json';
+
+  fetch(url2)
+  .then((respon) => respon.json())
+  .then((info) => {
+    removeDom();
+    render(info);
+  });
 
   fetch(url)
     .then((respon) => respon.json())
@@ -30,9 +38,6 @@ function response() {
         }
       });
 
-      removeDom();
-      render(info);
-      setInterval(() => render(info), 5000);
     });
 }
 
