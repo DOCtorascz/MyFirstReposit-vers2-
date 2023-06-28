@@ -12,7 +12,7 @@ function renderMessage(info, arrTime) {
   let strLastMessage = '';
   const m = arrTime;
 
-  info.lastMessages.forEach((element, index) => {
+  info.forEach((element, index) => {
     strLastMessage += `<div class="comments__account">
       <img class="account-page" src="${element.imgUrl}" alt="account">
       <div class="comments__page">
@@ -29,7 +29,7 @@ function renderMessage(info, arrTime) {
           <p>${element.comment}</p>
           <div class="comments__state">
             <img src="${element.imgLike}" alt="twit"><span>${element.repost}</span>
-            <img src="${element.imgLoaded}" alt="twit"><span>${element.like}</span>
+            <img src="${element.imgLoaded}" alt="twit"><span>${element.likes}</span>
             <img src="${element.imgRepost}" alt="twit"><span>${element.loaded}</span>
           </div>
         </div>
@@ -40,17 +40,19 @@ function renderMessage(info, arrTime) {
   });
 }
 
+let flag = 0;
+
 export default function render(info) {
-  let flag = 0;
   const arrTime = [];
 
-  info.lastMessages.forEach((item) => {
+  info.forEach((item) => {
     arrTime.push(item.timeAgo);
   });
 
-  renderMessage(info, arrTime);
-  flag = 1;
-
+  if (flag === 0) {
+    renderMessage(info, arrTime);
+    flag = 1;
+  }
   if (flag === 1) {
     setInterval(() => {
       removeDom();
