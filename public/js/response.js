@@ -15,12 +15,29 @@ function response() {
   const url = 'data.json';
   const url2 = 'posts.json';
 
-  fetch(url2)
+  fetch(url2, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8',
+    },
+  })
     .then((respon) => respon.json())
     .then((info) => {
       removeDom();
       render(info);
     });
+
+  // fetch(url2, {
+  //   method: 'PUT',
+  //   headers: {
+  //     'Content-Type': 'application/json;charset=utf-8',
+  //   },
+  // })
+  //   .then((respon) => respon.json())
+  //   .then((info) => {
+  //     removeDom();
+  //     render(info);
+  //   });
 
   fetch(url)
     .then((respon) => respon.json())

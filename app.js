@@ -34,6 +34,8 @@ const objSelect = await client.query('SELECT *FROM mess');
 
 await client.query('SELECT NOW() as now');
 
+app.use(express.json());
+
 app.get('/', (req, res) => {
   res.sendFile(path.resolve(dirname, 'public', 'index.html'));
 });
@@ -42,4 +44,21 @@ app.get('/posts.json', (req, res) => {
   res.type('json').send(objSelect.rows);
 });
 
-await client.end();
+// POST запрос на добавление месседжа
+app.post('/posts.json', async (req, res) => {
+  const post = await client.query("INSERT INTO mess (mess_id, imgurl, nameperson, login, timeago, repost, likes, loaded, comment, imgrepost, imglike, imgloaded) OVERRIDING SYSTEM VALUE VALUES ('7', '1st Street', 'Los Angeles', 'Harry Monroe', 'USA', 'USA', 'USA', 'USA', 'USA', 'USA', 'USA', 'USA')");
+  res.json(post);
+});
+
+// DELETE запрос на удаление месседжа
+app.delete('/posts.json', async (req, res) => {
+  const post = await client.query('DELETE FROM mess WHERE mess_id=6');
+  res.json(post);
+});
+
+// PUT запрос на изменение месседжа
+app.put('/posts.json', async (req, res) => {
+  const post = await client.query('UPDATE mess SET nameperson = 155 WHERE mess_id = 7');
+  res.json(post);
+});
+// await client.end();
