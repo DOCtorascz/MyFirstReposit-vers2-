@@ -52,7 +52,7 @@ app.post('/posts.json', async (req, res) => {
 
 // DELETE запрос на удаление месседжа
 app.delete('/posts.json', async (req, res) => {
-  const post = await client.query('DELETE FROM mess WHERE mess_id=6');
+  const post = await client.query('DELETE FROM mess WHERE mess_id=7');
   res.json(post);
 });
 

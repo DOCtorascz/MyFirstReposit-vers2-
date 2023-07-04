@@ -15,12 +15,7 @@ function response() {
   const url = 'data.json';
   const url2 = 'posts.json';
 
-  fetch(url2, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json;charset=utf-8',
-    },
-  })
+  fetch(url2)
     .then((respon) => respon.json())
     .then((info) => {
       removeDom();
@@ -28,7 +23,7 @@ function response() {
     });
 
   // fetch(url2, {
-  //   method: 'PUT',
+  //   method: 'DELETE',
   //   headers: {
   //     'Content-Type': 'application/json;charset=utf-8',
   //   },
