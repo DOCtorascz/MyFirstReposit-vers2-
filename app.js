@@ -46,19 +46,51 @@ app.get('/posts.json', (req, res) => {
 
 // POST запрос на добавление месседжа
 app.post('/posts.json', async (req, res) => {
-  const post = await client.query("INSERT INTO mess (mess_id, imgurl, nameperson, login, timeago, repost, likes, loaded, comment, imgrepost, imglike, imgloaded) OVERRIDING SYSTEM VALUE VALUES ('7', '1st Street', 'Los Angeles', 'Harry Monroe', 'USA', 'USA', 'USA', 'USA', 'USA', 'USA', 'USA', 'USA')");
+  const {
+    messId,
+    imgurl,
+    nameperson,
+    login,
+    timeago,
+    repost,
+    likes,
+    loaded,
+    comment,
+    imgrepost,
+    imglike,
+    imgloaded,
+  } = req.body;
+
+  const postStr = `
+  '${messId}', 
+  '${imgurl}', 
+  '${nameperson}', 
+  '${login}', 
+  '${timeago}', 
+  '${repost}', 
+  '${likes}', 
+  '${loaded}', 
+  '${comment}', 
+  '${imgrepost}', 
+  '${imglike}', 
+  '${imgloaded}'`;
+
+  const post = await client.query(`INSERT INTO mess (mess_id, imgurl, nameperson, login, timeago, repost, likes, loaded, comment, imgrepost, imglike, imgloaded)
+   OVERRIDING SYSTEM VALUE VALUES (${postStr})`);
+
   res.json(post);
 });
 
 // DELETE запрос на удаление месседжа
 app.delete('/posts.json', async (req, res) => {
-  const post = await client.query('DELETE FROM mess WHERE mess_id=7');
+  const post = await client.query(`DELETE FROM mess WHERE mess_id=${req.body.messId}`);
   res.json(post);
 });
 
 // PUT запрос на изменение месседжа
 app.put('/posts.json', async (req, res) => {
-  const post = await client.query('UPDATE mess SET nameperson = 155 WHERE mess_id = 7');
+  const { loginRow, loginNew, id } = req.body;
+  const post = await client.query(`UPDATE mess SET ${loginRow} = '${loginNew}' WHERE mess_id = ${id}`);
   res.json(post);
 });
 // await client.end();

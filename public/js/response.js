@@ -12,6 +12,27 @@ function response() {
     flag = 0;
   }
 
+  const postRqBody = {
+    messId: '7',
+    imgurl: '1st Street',
+    nameperson: 'Los Angeles',
+    login: 'Harry Monroe',
+    timeago: 'USA',
+    repost: 'USA',
+    likes: 'USA',
+    loaded: 'USA',
+    comment: 'USA',
+    imgrepost: 'USA',
+    imglike: 'USA',
+    imgloaded: 'USA',
+  };
+
+  // const putRqBody = {
+  //   loginRow: 'nameperson',
+  //   loginNew: '2hels',
+  //   id: '7',
+  // };
+
   const url = 'data.json';
   const url2 = 'posts.json';
 
@@ -22,17 +43,14 @@ function response() {
       render(info);
     });
 
-  // fetch(url2, {
-  //   method: 'DELETE',
-  //   headers: {
-  //     'Content-Type': 'application/json;charset=utf-8',
-  //   },
-  // })
-  //   .then((respon) => respon.json())
-  //   .then((info) => {
-  //     removeDom();
-  //     render(info);
-  //   });
+  fetch(url2, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8',
+    },
+    body: JSON.stringify(postRqBody),
+  })
+    .then((respon) => respon.json());
 
   fetch(url)
     .then((respon) => respon.json())
