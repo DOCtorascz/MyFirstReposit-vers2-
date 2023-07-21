@@ -12,26 +12,14 @@ function response() {
     flag = 0;
   }
 
-  const postRqBody = {
-    messId: '7',
-    imgurl: '1st Street',
-    nameperson: 'Los Angeles',
-    login: 'Harry Monroe',
-    timeago: 'USA',
-    repost: 'USA',
-    likes: 'USA',
-    loaded: 'USA',
-    comment: 'USA',
-    imgrepost: 'USA',
-    imglike: 'USA',
-    imgloaded: 'USA',
-  };
-
-  // const putRqBody = {
-  //   loginRow: 'nameperson',
-  //   loginNew: '2hels',
-  //   id: '7',
+  // const postRqBody = {
+  //   comment: 'USA',
   // };
+
+  const putRqBody = {
+    commentNew: '2hels',
+    id: '15',
+  };
 
   const url = 'data.json';
   const url2 = 'posts.json';
@@ -48,7 +36,7 @@ function response() {
     headers: {
       'Content-Type': 'application/json;charset=utf-8',
     },
-    body: JSON.stringify(postRqBody),
+    body: JSON.stringify(putRqBody),
   })
     .then((respon) => respon.json());
 

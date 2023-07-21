@@ -47,50 +47,27 @@ app.get('/posts.json', (req, res) => {
 // POST запрос на добавление месседжа
 app.post('/posts.json', async (req, res) => {
   const {
-    messId,
-    imgurl,
-    nameperson,
-    login,
-    timeago,
-    repost,
-    likes,
-    loaded,
     comment,
-    imgrepost,
-    imglike,
-    imgloaded,
   } = req.body;
 
-  const postStr = `
-  '${messId}', 
-  '${imgurl}', 
-  '${nameperson}', 
-  '${login}', 
-  '${timeago}', 
-  '${repost}', 
-  '${likes}', 
-  '${loaded}', 
-  '${comment}', 
-  '${imgrepost}', 
-  '${imglike}', 
-  '${imgloaded}'`;
+  const postStr = ` 
+  '${comment}'`;
 
-  const post = await client.query(`INSERT INTO mess (mess_id, imgurl, nameperson, login, timeago, repost, likes, loaded, comment, imgrepost, imglike, imgloaded)
-   OVERRIDING SYSTEM VALUE VALUES (${postStr})`);
+  const post = await client.query(`INSERT INTO mess (comment) VALUES (${postStr})`);
 
   res.json(post);
 });
 
 // DELETE запрос на удаление месседжа
 app.delete('/posts.json', async (req, res) => {
-  const post = await client.query(`DELETE FROM mess WHERE mess_id=${req.body.messId}`);
+  const post = await client.query(`DELETE FROM mess WHERE mess_id=${req.body.id}`);
   res.json(post);
 });
 
 // PUT запрос на изменение месседжа
 app.put('/posts.json', async (req, res) => {
-  const { loginRow, loginNew, id } = req.body;
-  const post = await client.query(`UPDATE mess SET ${loginRow} = '${loginNew}' WHERE mess_id = ${id}`);
+  const { commentNew, id } = req.body;
+  const post = await client.query(`UPDATE mess SET comment = '${commentNew}' WHERE mess_id = ${id}`);
   res.json(post);
 });
 // await client.end();
