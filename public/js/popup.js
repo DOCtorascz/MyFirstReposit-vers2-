@@ -1,4 +1,6 @@
 import valid from './valid.js';
+import registrationRq from './authoriz/registrationRq.js';
+import authorizRq from './authoriz/authorizRq.js';
 
 const headerFormAutoriz = document.querySelectorAll('.regPopup');
 const headerFormAutoriz2 = document.querySelectorAll('.openPopup');
@@ -10,6 +12,7 @@ const body = document.querySelector('body');
 const formContent = document.querySelectorAll('.name__content');
 const formContentErr = document.querySelectorAll('.name__content__err');
 const formRegistr = document.querySelectorAll('.fr');
+const authoriz = document.querySelector('.autho');
 
 function bodyLock() {
   let scrollWidth = window.innerWidth - document.querySelector('body').offsetWidth;
@@ -92,6 +95,7 @@ document.addEventListener('click', (e) => {
 
 document.addEventListener('click', (e) => {
   if (e.target === headerFormRegistr) {
+    registrationRq.registrationRq(e);
     e.preventDefault();
     for (let j = 0; j <= headerFormRegistr.parentNode.children.length - 2; j += 1) {
       const valueInput = headerFormRegistr.parentNode.children[j].children[1];
@@ -114,6 +118,10 @@ document.addEventListener('click', (e) => {
       }
     }
   }
+});
+
+authoriz.addEventListener('click', (e) => {
+  authorizRq.authorizRq(e);
 });
 
 popupCloses();

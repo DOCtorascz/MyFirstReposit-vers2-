@@ -18,7 +18,7 @@ function renderMessage(info, arrTime) {
       <div class="comments__page">
         <div class="comments__info-account">
           <div class="comments__account-name">
-            <p>${element.namePerson}</p>
+            <p>${element.nameperson}</p>
             <p>${element.login}</p>
           </div>
           <div class="comments__time-back">
