@@ -31,6 +31,8 @@ await client.connect();
 // await client.query('ALTER TABLE mess ADD COLUMN imgUrl text');
 
 const objSelect = await client.query('SELECT *FROM mess');
+// Дополнительная таблица для регистраций
+const objSelect2 = await client.query('SELECT *FROM account');
 
 await client.query('SELECT NOW() as now');
 
@@ -68,6 +70,29 @@ app.delete('/posts.json', async (req, res) => {
 app.put('/posts.json', async (req, res) => {
   const { commentNew, id } = req.body;
   const post = await client.query(`UPDATE mess SET comment = '${commentNew}' WHERE mess_id = ${id}`);
+  res.json(post);
+});
+
+// Авторизация и получение пользователей
+app.get('/account.json', (req, res) => {
+  res.type('json').send(objSelect2.rows);
+});
+
+// Добавление пользователей
+app.post('/account.json', async (req, res) => {
+  const {
+    LOGIN,
+    PASSWORD,
+    TOKEN,
+  } = req.body;
+
+  const postStr = ` 
+  '${LOGIN}',
+  '${PASSWORD}',
+  '${TOKEN}'`;
+
+  const post = await client.query(`INSERT INTO account (account_name, account_password, token) VALUES (${postStr})`);
+
   res.json(post);
 });
 // await client.end();
